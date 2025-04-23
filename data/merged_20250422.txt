@@ -1,0 +1,2547 @@
+合并文件: markdown_content_20250422_204056.txt, markdown_content_20250422_204322.txt, markdown_content_20250422_204416.txt, markdown_content_20250422_204510.txt, markdown_content_20250422_204549.txt, markdown_content_20250422_204613.txt, markdown_content_20250422_204701.txt, markdown_content_20250422_204723.txt, markdown_content_20250422_204815.txt
+合并时间: 2025-04-23 21:23:25
+来源: Huawei Developer
+
+
+==================================================
+文件: markdown_content_20250422_204056.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-dev-guide
+爬取时间: 2025-04-22 20:40:56
+来源: Huawei Developer
+
+入门
+
+入门可以帮助开发者了解应用开发的基本方法。
+
+通过这一部分内容的学习和初步实践，开发者可以快速构建出首个HarmonyOS应用，掌握应用程序包结构、资源文件的使用、以及ArkTS的核心功能和语法等基础知识，为后续的应用开发奠定基础。
+
+开发
+
+从HarmonyOS NEXT Developer Preview1（API 11）版本开始，HarmonyOS SDK以Kit维度提供丰富、完备的开放能力，涵盖应用框架、系统、媒体、图形、应用服务、AI六大领域，例如：
+
+应用框架相关Kit开放能力：Ability Kit（程序框架服务）、ArkUI（方舟UI框架）等。
+
+系统相关Kit开放能力：Universal Keystore Kit（密钥管理服务）、Network Kit（网络服务）等。
+
+媒体相关Kit开放能力：Audio Kit（音频服务）、Media Library Kit（媒体文件管理服务）等。
+
+图形相关Kit开放能力：ArkGraphics 2D（方舟2D图形服务）、Graphics Accelerate Kit（图形加速服务）等。
+
+应用服务相关Kit开放能力：Game Service Kit（游戏服务）、Location Kit（位置服务）等。
+
+AI相关Kit开放能力：Intents Kit（意图框架服务）、HiAI Foundation Kit（HiAI Foundation服务）等。
+
+我们针对重点开放能力提供了开发指导，助力开发者高效开发。详情请参见“开发”目录下相关内容。
+
+工具
+
+DevEco Studio工具是HarmonyOS应用开发推荐的IDE工具。
+
+在工具部分，讲解了DevEco Studio工具的详细用法，包括使用该工具进行工程创建、应用签名、应用调试、应用安装运行的指导。
+
+API参考
+
+API参考提供了HarmonyOS SDK各Kit开放能力的全量组件和接口的说明文档，可以帮助开发者快速查找到指定接口的详细描述和调用方法。详情请参见API参考。
+
+
+==================================================
+文件: markdown_content_20250422_204322.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/start-overview
+爬取时间: 2025-04-22 20:43:22
+来源: Huawei Developer
+
+
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/start-overview
+爬取时间: 2025-04-22 20:43:22
+来源: Huawei Developer
+
+基本概念
+
+UI框架
+
+HarmonyOS提供了一套UI开发框架，即方舟开发框架（ArkUI框架）。方舟开发框架可为开发者提供应用UI开发所必需的能力，比如多种组件、布局计算、动画能力、UI交互、绘制等。
+
+方舟开发框架针对不同目的和技术背景的开发者提供了两种开发范式，分别是基于ArkTS的声明式开发范式（简称“声明式开发范式”）和兼容JS的类Web开发范式（简称“类Web开发范式”）。以下是两种开发范式的简单对比。
+
+开发范式名称语言生态UI更新方式适用场景适用人群声明式开发范式ArkTS语言数据驱动更新复杂度较大、团队合作度较高的程序移动系统应用开发人员、系统应用开发人员类Web开发范式JS语言数据驱动更新界面较为简单的程序应用和卡片Web前端开发人员
+
+开发范式名称
+
+语言生态
+
+UI更新方式
+
+适用场景
+
+适用人群
+
+声明式开发范式
+
+ArkTS语言
+
+数据驱动更新
+
+复杂度较大、团队合作度较高的程序
+
+移动系统应用开发人员、系统应用开发人员
+
+类Web开发范式
+
+JS语言
+
+界面较为简单的程序应用和卡片
+
+Web前端开发人员
+
+更多UI框架的开发内容及指导，详见UI开发。
+
+应用模型
+
+应用模型是HarmonyOS为开发者提供的应用程序所需能力的抽象提炼，它提供了应用程序必备的组件和运行机制。有了应用模型，开发者可以基于一套统一的模型进行应用开发，使应用开发更简单、高效。
+
+随着系统的演进发展，HarmonyOS先后提供了两种应用模型：
+
+FA（Feature Ability）模型：HarmonyOS API 7开始支持的模型，已经不再主推。FA模型开发可见FA模型开发概述。快速入门章节不再对此展开提供开发指导。
+
+Stage模型：HarmonyOS API 9开始新增的模型，是目前主推且会长期演进的模型。在该模型中，由于提供了AbilityStage、WindowStage等类作为应用组件和Window窗口的“舞台”，因此称这种应用模型为Stage模型。Stage模型开发可见Stage模型开发概述。快速入门以此为例提供开发指导。
+
+FA模型和Stage模型的整体架构和设计思想等更多区别，请见应用模型。
+
+快速入门提供了一个含有两个页面的开发实例，并基于Stage模型构建第一个ArkTS应用，以便开发者理解以上基本概念及应用开发流程。
+
+工具准备
+
+请安装最新版DevEco Studio。
+
+完成上述操作及基本概念的理解后，可参照构建第一个ArkTS应用（Stage模型）进行下一步体验和学习。
+
+
+==================================================
+文件: markdown_content_20250422_204416.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/start-with-ets-stage
+爬取时间: 2025-04-22 20:44:16
+来源: Huawei Developer
+
+
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/start-with-ets-stage
+爬取时间: 2025-04-22 20:44:16
+来源: Huawei Developer
+
+创建ArkTS工程
+
+若首次打开DevEco Studio，请点击Create Project创建工程。如果已经打开了一个工程，请在菜单栏选择File>New>Create Project来创建一个新工程。
+
+选择Application应用开发（本文以应用开发为例，Atomic Service对应为元服务开发），选择模板Empty Ability，点击Next进行下一步配置。若开发者需要进行Native相关工程的开发，请选择Native C++模板，更多模板的使用和说明请见工程模板介绍。
+
+选择Application应用开发（本文以应用开发为例，Atomic Service对应为元服务开发），选择模板Empty Ability，点击Next进行下一步配置。
+
+若开发者需要进行Native相关工程的开发，请选择Native C++模板，更多模板的使用和说明请见工程模板介绍。
+
+进入配置工程界面，Compatible SDK表示兼容的最低API Version，此处以选择5.0.4(16)为例，其他参数保持默认设置即可。
+
+点击Finish，工具会自动生成示例代码和相关资源，等待工程创建完成。
+
+ArkTS工程目录结构（Stage模型）
+
+AppScope > app.json5：应用的全局配置信息，详见app.json5配置文件。
+
+entry：HarmonyOS工程模块，编译构建生成一个HAP包。src > main > ets：用于存放ArkTS源码。src > main > ets > entryability：应用/服务的入口。src > main > ets > entrybackupability：应用提供扩展的备份恢复能力。src > main > ets > pages：应用/服务包含的页面。src > main > resources：用于存放应用/服务所用到的资源文件，如图形、多媒体、字符串、布局文件等。关于资源文件，详见资源分类与访问。src > main > module.json5：模块配置文件。主要包含HAP包的配置信息、应用/服务在具体设备上的配置信息以及应用/服务的全局配置信息。具体的配置文件说明，详见module.json5配置文件。build-profile.json5：当前的模块信息 、编译信息配置项，包括buildOption、targets配置等。hvigorfile.ts：模块级编译构建任务脚本。obfuscation-rules.txt：混淆规则文件。混淆开启后，在使用Release模式进行编译时，会对代码进行编译、混淆及压缩处理，保护代码资产。详见开启代码混淆。oh-package.json5：用来描述包名、版本、入口文件（类型声明文件）和依赖项等信息。
+
+src > main > ets：用于存放ArkTS源码。
+
+src > main > ets > entryability：应用/服务的入口。
+
+src > main > ets > entrybackupability：应用提供扩展的备份恢复能力。
+
+src > main > ets > pages：应用/服务包含的页面。
+
+src > main > resources：用于存放应用/服务所用到的资源文件，如图形、多媒体、字符串、布局文件等。关于资源文件，详见资源分类与访问。
+
+src > main > module.json5：模块配置文件。主要包含HAP包的配置信息、应用/服务在具体设备上的配置信息以及应用/服务的全局配置信息。具体的配置文件说明，详见module.json5配置文件。
+
+build-profile.json5：当前的模块信息 、编译信息配置项，包括buildOption、targets配置等。
+
+hvigorfile.ts：模块级编译构建任务脚本。
+
+obfuscation-rules.txt：混淆规则文件。混淆开启后，在使用Release模式进行编译时，会对代码进行编译、混淆及压缩处理，保护代码资产。详见开启代码混淆。
+
+oh-package.json5：用来描述包名、版本、入口文件（类型声明文件）和依赖项等信息。
+
+oh_modules：用于存放三方库依赖信息。
+
+build-profile.json5：工程级配置信息，包括签名signingConfigs、产品配置products等。其中products中可配置当前运行环境，默认为HarmonyOS。
+
+hvigorfile.ts：工程级编译构建任务脚本。
+
+oh-package.json5：主要用来描述全局配置，如：依赖覆盖（overrides）、依赖关系重写（overrideDependencyMap）和参数化配置（parameterFile）等。
+
+构建第一个页面
+
+使用文本组件。工程同步完成后，在Project窗口，点击entry > src > main > ets > pages，打开Index.ets文件，进行页面的编写。针对本文中使用文本/按钮来实现页面跳转/返回的应用场景，页面均使用Row和Column组件来组建布局。对于更多复杂元素对齐的场景，可选择使用RelativeContainer组件进行布局。Index.ets文件的示例如下：收起深色代码主题复制// Index.ets@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)}.width('100%')}.height('100%')}}
+
+使用文本组件。
+
+工程同步完成后，在Project窗口，点击entry > src > main > ets > pages，打开Index.ets文件，进行页面的编写。
+
+针对本文中使用文本/按钮来实现页面跳转/返回的应用场景，页面均使用Row和Column组件来组建布局。对于更多复杂元素对齐的场景，可选择使用RelativeContainer组件进行布局。
+
+Index.ets文件的示例如下：
+
+收起深色代码主题复制// Index.ets@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)}.width('100%')}.height('100%')}}
+
+收起深色代码主题复制
+
+收起
+
+深色代码主题复制
+
+深色代码主题
+
+复制
+
+``` // Index.ets@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)}.width('100%')}.height('100%')}} ```
+
+// Index.ets
+
+@Entry
+
+@Component
+
+structIndex{
+
+Index
+
+@Statemessage:string='Hello World';
+
+@State
+
+message
+
+string
+
+'Hello World'
+
+build() {
+
+build
+
+Row() {
+
+Row
+
+Column() {
+
+Column
+
+Text(this.message)
+
+Text
+
+this
+
+.fontSize(50)
+
+fontSize
+
+50
+
+.fontWeight(FontWeight.Bold)
+
+fontWeight
+
+FontWeight
+
+Bold
+
+}
+
+.width('100%')
+
+width
+
+'100%'
+
+.height('100%')
+
+height
+
+添加按钮。在默认页面基础上，我们添加一个Button组件，作为按钮响应用户点击，从而实现跳转到另一个页面。Index.ets文件的示例如下：收起深色代码主题复制// Index.ets@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)// 添加按钮，以响应用户点击Button() {Text('Next').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')}.width('100%')}.height('100%')}}
+
+添加按钮。
+
+在默认页面基础上，我们添加一个Button组件，作为按钮响应用户点击，从而实现跳转到另一个页面。Index.ets文件的示例如下：
+
+收起深色代码主题复制// Index.ets@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)// 添加按钮，以响应用户点击Button() {Text('Next').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')}.width('100%')}.height('100%')}}
+
+``` // Index.ets@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)// 添加按钮，以响应用户点击Button() {Text('Next').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')}.width('100%')}.height('100%')}} ```
+
+// 添加按钮，以响应用户点击
+
+Button() {
+
+Button
+
+Text('Next')
+
+'Next'
+
+.fontSize(30)
+
+30
+
+.type(ButtonType.Capsule)
+
+type
+
+ButtonType
+
+Capsule
+
+.margin({
+
+margin
+
+top:20
+
+top
+
+20
+
+})
+
+.backgroundColor('#0D9FFB')
+
+backgroundColor
+
+'#0D9FFB'
+
+.width('40%')
+
+'40%'
+
+.height('5%')
+
+'5%'
+
+在编辑窗口右上角的侧边工具栏，点击Previewer，打开预览器。第一个页面效果如下图所示：
+
+构建第二个页面
+
+创建第二个页面。新建第二个页面文件。在Project窗口，打开entry > src > main > ets，右键点击pages文件夹，选择New > ArkTS File，命名为Second，点击回车键。可以看到文件目录结构如下：说明开发者也可以在右键点击pages文件夹时，选择New > Page> Empty Page，命名为Second，点击Finish完成第二个页面的创建。使用此种方式则无需再进行下文中第二个页面路由的手动配置。配置第二个页面的路由。在Project窗口，打开entry > src > main > resources > base > profile，在main_pages.json文件中的"src"下配置第二个页面的路由"pages/Second"。示例如下：收起深色代码主题复制{"src":["pages/Index","pages/Second"]}
+
+创建第二个页面。
+
+新建第二个页面文件。在Project窗口，打开entry > src > main > ets，右键点击pages文件夹，选择New > ArkTS File，命名为Second，点击回车键。可以看到文件目录结构如下：说明开发者也可以在右键点击pages文件夹时，选择New > Page> Empty Page，命名为Second，点击Finish完成第二个页面的创建。使用此种方式则无需再进行下文中第二个页面路由的手动配置。
+
+新建第二个页面文件。在Project窗口，打开entry > src > main > ets，右键点击pages文件夹，选择New > ArkTS File，命名为Second，点击回车键。可以看到文件目录结构如下：
+
+说明开发者也可以在右键点击pages文件夹时，选择New > Page> Empty Page，命名为Second，点击Finish完成第二个页面的创建。使用此种方式则无需再进行下文中第二个页面路由的手动配置。
+
+说明
+
+开发者也可以在右键点击pages文件夹时，选择New > Page> Empty Page，命名为Second，点击Finish完成第二个页面的创建。使用此种方式则无需再进行下文中第二个页面路由的手动配置。
+
+配置第二个页面的路由。在Project窗口，打开entry > src > main > resources > base > profile，在main_pages.json文件中的"src"下配置第二个页面的路由"pages/Second"。示例如下：收起深色代码主题复制{"src":["pages/Index","pages/Second"]}
+
+配置第二个页面的路由。在Project窗口，打开entry > src > main > resources > base > profile，在main_pages.json文件中的"src"下配置第二个页面的路由"pages/Second"。示例如下：
+
+收起深色代码主题复制{"src":["pages/Index","pages/Second"]}
+
+``` {"src":["pages/Index","pages/Second"]} ```
+
+{
+
+"src":[
+
+"src"
+
+:
+
+[
+
+"pages/Index",
+
+"pages/Index"
+
+,
+
+"pages/Second"
+
+]
+
+添加文本及按钮。参照第一个页面，在第二个页面添加Text组件、Button组件等，并设置其样式。Second.ets文件的示例如下：收起深色代码主题复制// Second.ets@Entry@ComponentstructSecond{@Statemessage:string='Hi there';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)Button() {Text('Back').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')}.width('100%')}.height('100%')}}
+
+添加文本及按钮。
+
+参照第一个页面，在第二个页面添加Text组件、Button组件等，并设置其样式。Second.ets文件的示例如下：
+
+收起深色代码主题复制// Second.ets@Entry@ComponentstructSecond{@Statemessage:string='Hi there';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)Button() {Text('Back').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')}.width('100%')}.height('100%')}}
+
+``` // Second.ets@Entry@ComponentstructSecond{@Statemessage:string='Hi there';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)Button() {Text('Back').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')}.width('100%')}.height('100%')}} ```
+
+// Second.ets
+
+structSecond{
+
+Second
+
+@Statemessage:string='Hi there';
+
+'Hi there'
+
+Text('Back')
+
+'Back'
+
+实现页面间的跳转
+
+页面间的导航可以通过页面路由router来实现。页面路由router根据页面url找到目标页面，从而实现跳转。使用页面路由请导入router模块。
+
+如果需要实现更好的转场动效，推荐使用Navigation。
+
+第一个页面跳转到第二个页面。在第一个页面中，跳转按钮绑定onClick事件，点击按钮时跳转到第二页。Index.ets文件的示例如下：收起深色代码主题复制// Index.ets// 导入页面路由模块import{ router }from'@kit.ArkUI';import{BusinessError}from'@kit.BasicServicesKit';@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)// 添加按钮，以响应用户点击Button() {Text('Next').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')// 跳转按钮绑定onClick事件，点击时跳转到第二页.onClick(() =>{console.info(`Succeeded in clicking the 'Next' button.`)// 跳转到第二页router.pushUrl({url:'pages/Second'}).then(() =>{console.info('Succeeded in jumping to the second page.')}).catch((err: BusinessError) =>{console.error(`Failed to jump to the second page. Code is${err.code}, message is${err.message}`)})})}.width('100%')}.height('100%')}}
+
+第一个页面跳转到第二个页面。
+
+在第一个页面中，跳转按钮绑定onClick事件，点击按钮时跳转到第二页。Index.ets文件的示例如下：
+
+收起深色代码主题复制// Index.ets// 导入页面路由模块import{ router }from'@kit.ArkUI';import{BusinessError}from'@kit.BasicServicesKit';@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)// 添加按钮，以响应用户点击Button() {Text('Next').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')// 跳转按钮绑定onClick事件，点击时跳转到第二页.onClick(() =>{console.info(`Succeeded in clicking the 'Next' button.`)// 跳转到第二页router.pushUrl({url:'pages/Second'}).then(() =>{console.info('Succeeded in jumping to the second page.')}).catch((err: BusinessError) =>{console.error(`Failed to jump to the second page. Code is${err.code}, message is${err.message}`)})})}.width('100%')}.height('100%')}}
+
+``` // Index.ets// 导入页面路由模块import{ router }from'@kit.ArkUI';import{BusinessError}from'@kit.BasicServicesKit';@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)// 添加按钮，以响应用户点击Button() {Text('Next').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')// 跳转按钮绑定onClick事件，点击时跳转到第二页.onClick(() =>{console.info(`Succeeded in clicking the 'Next' button.`)// 跳转到第二页router.pushUrl({url:'pages/Second'}).then(() =>{console.info('Succeeded in jumping to the second page.')}).catch((err: BusinessError) =>{console.error(`Failed to jump to the second page. Code is${err.code}, message is${err.message}`)})})}.width('100%')}.height('100%')}} ```
+
+// 导入页面路由模块
+
+import{ router }from'@kit.ArkUI';
+
+import
+
+from
+
+'@kit.ArkUI'
+
+import{BusinessError}from'@kit.BasicServicesKit';
+
+BusinessError
+
+'@kit.BasicServicesKit'
+
+// 跳转按钮绑定onClick事件，点击时跳转到第二页
+
+.onClick(() =>{
+
+onClick
+
+() =>
+
+console.info(`Succeeded in clicking the 'Next' button.`)
+
+console
+
+info
+
+`Succeeded in clicking the 'Next' button.`
+
+// 跳转到第二页
+
+router.pushUrl({url:'pages/Second'}).then(() =>{
+
+pushUrl
+
+url
+
+'pages/Second'
+
+then
+
+console.info('Succeeded in jumping to the second page.')
+
+'Succeeded in jumping to the second page.'
+
+}).catch((err: BusinessError) =>{
+
+catch
+
+(err: BusinessError) =>
+
+err: BusinessError
+
+console.error(`Failed to jump to the second page. Code is${err.code}, message is${err.message}`)
+
+error
+
+`Failed to jump to the second page. Code is${err.code}, message is${err.message}`
+
+${err.code}
+
+${err.message}
+
+第二个页面返回到第一个页面。在第二个页面中，返回按钮绑定onClick事件，点击按钮时返回到第一页。Second.ets文件的示例如下：收起深色代码主题复制// Second.ets// 导入页面路由模块import{ router }from'@kit.ArkUI';import{BusinessError}from'@kit.BasicServicesKit';@Entry@ComponentstructSecond{@Statemessage:string='Hi there';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)Button() {Text('Back').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')// 返回按钮绑定onClick事件，点击按钮时返回到第一页.onClick(() =>{console.info(`Succeeded in clicking the 'Back' button.`)try{// 返回第一页router.back()console.info('Succeeded in returning to the first page.')}catch(err) {letcode = (errasBusinessError).code;letmessage = (errasBusinessError).message;console.error(`Failed to return to the first page. Code is${code}, message is${message}`)}})}.width('100%')}.height('100%')}}
+
+第二个页面返回到第一个页面。
+
+在第二个页面中，返回按钮绑定onClick事件，点击按钮时返回到第一页。Second.ets文件的示例如下：
+
+收起深色代码主题复制// Second.ets// 导入页面路由模块import{ router }from'@kit.ArkUI';import{BusinessError}from'@kit.BasicServicesKit';@Entry@ComponentstructSecond{@Statemessage:string='Hi there';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)Button() {Text('Back').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')// 返回按钮绑定onClick事件，点击按钮时返回到第一页.onClick(() =>{console.info(`Succeeded in clicking the 'Back' button.`)try{// 返回第一页router.back()console.info('Succeeded in returning to the first page.')}catch(err) {letcode = (errasBusinessError).code;letmessage = (errasBusinessError).message;console.error(`Failed to return to the first page. Code is${code}, message is${message}`)}})}.width('100%')}.height('100%')}}
+
+``` // Second.ets// 导入页面路由模块import{ router }from'@kit.ArkUI';import{BusinessError}from'@kit.BasicServicesKit';@Entry@ComponentstructSecond{@Statemessage:string='Hi there';build() {Row() {Column() {Text(this.message).fontSize(50).fontWeight(FontWeight.Bold)Button() {Text('Back').fontSize(30).fontWeight(FontWeight.Bold)}.type(ButtonType.Capsule).margin({top:20}).backgroundColor('#0D9FFB').width('40%').height('5%')// 返回按钮绑定onClick事件，点击按钮时返回到第一页.onClick(() =>{console.info(`Succeeded in clicking the 'Back' button.`)try{// 返回第一页router.back()console.info('Succeeded in returning to the first page.')}catch(err) {letcode = (errasBusinessError).code;letmessage = (errasBusinessError).message;console.error(`Failed to return to the first page. Code is${code}, message is${message}`)}})}.width('100%')}.height('100%')}} ```
+
+// 返回按钮绑定onClick事件，点击按钮时返回到第一页
+
+console.info(`Succeeded in clicking the 'Back' button.`)
+
+`Succeeded in clicking the 'Back' button.`
+
+try{
+
+try
+
+// 返回第一页
+
+router.back()
+
+back
+
+console.info('Succeeded in returning to the first page.')
+
+'Succeeded in returning to the first page.'
+
+}catch(err) {
+
+letcode = (errasBusinessError).code;
+
+let
+
+as
+
+code
+
+letmessage = (errasBusinessError).message;
+
+console.error(`Failed to return to the first page. Code is${code}, message is${message}`)
+
+`Failed to return to the first page. Code is${code}, message is${message}`
+
+${code}
+
+${message}
+
+打开Index.ets文件，点击预览器中的按钮进行刷新。效果如下图所示：
+
+使用真机运行应用
+
+将搭载HarmonyOS系统的真机与电脑连接。具体指导及要求，可查看使用本地真机运行应用/服务。
+
+点击File>Project Structure...>Project>SigningConfigs界面勾选Support HarmonyOS和Automatically generate signature，点击界面提示的Sign In，使用华为账号登录。等待自动签名完成后，点击OK即可。如下图所示：
+
+在编辑窗口右上角的工具栏，点击按钮运行。效果如下图所示：
+
+恭喜您已经基于Stage模型构建完成第一个ArkTS应用，快来探索更多的HarmonyOS功能吧。
+
+
+==================================================
+文件: markdown_content_20250422_204510.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-package-glossary
+爬取时间: 2025-04-22 20:45:10
+来源: Huawei Developer
+
+
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-package-glossary
+爬取时间: 2025-04-22 20:45:10
+来源: Huawei Developer
+
+E
+
+ExtensionAbility
+
+Stage模型中的组件类型名，即ExtensionAbility组件，提供特定场景（如卡片、输入法）的扩展能力，满足更多的使用场景。
+
+F
+
+FA
+
+Feature Ability，在FA模型中代表有界面的Ability，用于与用户进行交互。
+
+FA模型
+
+API version 8及更早版本支持的应用模型，已经不再主推。建议使用新的Stage模型进行开发。
+
+H
+
+HAP
+
+Harmony Ability Package，一个HAP文件包含应用的所有内容，由代码、资源、三方库及应用配置文件组成，其文件后缀名为.hap。
+
+HAR
+
+Harmony Archive Package，静态共享包，编译态复用。可以包含代码、C++库、资源和配置文件，其文件后缀名为.har，用于实现代码和资源的共享。
+
+HSP
+
+Harmony Shared Package，动态共享包，运行时复用。可以包含代码、C++库、资源和配置文件，其文件后缀名为.hsp，用于实现代码和资源的共享。
+
+M
+
+Module
+
+模块，应用的一部分，每个模块都有单独的module.json5配置文件。项目工程中，Entry、Feature、HSP和HAR均为应用的一个模块。
+
+P
+
+PA
+
+Particle Ability，在FA模型中代表无界面的Ability，主要为Feature Ability提供支持，例如作为后台服务提供计算能力，或作为数据仓库提供数据访问能力。
+
+S
+
+Stage模型
+
+API version 9开始新增的应用模型，提供UIAbility、ExtensionAbility两大类应用组件。由于该模型还提供了AbilityStage、WindowStage等类作为应用组件和Window窗口的“舞台”，因此称之为Stage模型。
+
+U
+
+UIAbility
+
+Stage模型中的组件类型名，即UIAbility组件，包含UI，提供展示UI的能力，主要用于和用户交互。
+
+
+==================================================
+文件: markdown_content_20250422_204549.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-package-overview
+爬取时间: 2025-04-22 20:45:49
+来源: Huawei Developer
+
+
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-package-overview
+爬取时间: 2025-04-22 20:45:49
+来源: Huawei Developer
+
+应用与应用程序包
+
+用户应用程序泛指运行在设备的操作系统之上，为用户提供特定服务的程序，简称“应用”。一个应用所对应的软件包文件，称为“应用程序包”。
+
+当前系统提供了应用程序包开发、安装、查询、更新、卸载的管理机制，便于开发者开发和管理应用。同时，系统还屏蔽了不同的芯片平台的差异（包括x86/ARM，32位/64位等），应用程序包在不同的芯片平台都能够安装运行，这使得开发者可以聚焦于应用的功能实现。
+
+应用的多Module设计机制
+
+支持模块化开发：一个应用通常会包含多种功能，将不同的功能特性按模块来划分和管理是一种良好的设计方式。在开发过程中，我们可以将每个功能模块作为一个独立的Module进行开发，Module中可以包含源代码、资源文件、第三方库、配置文件等，每一个Module可以独立编译，实现特定的功能。这种模块化、松耦合的应用管理方式有助于应用的开发、维护与扩展。
+
+支持多设备适配：一个应用往往需要适配多种设备类型，在采用多Module设计的应用中，每个Module都会标注所支持的设备类型。有些Module支持全部类型的设备，有些Module只支持某一种或几种类型的设备（比如平板），那么在应用市场分发应用包时，也能够根据设备类型做精准的筛选和匹配，从而将不同的包合理的组合和部署到对应的设备上。
+
+Module类型
+
+Module按照使用场景可以分为两种类型：
+
+Ability类型的Module：用于实现应用的功能和特性。每一个Ability类型的Module编译后，会生成一个以.hap为后缀的文件，我们称其为HAP（Harmony Ability Package）包。HAP包可以独立安装和运行，是应用安装的基本单位，一个应用中可以包含一个或多个HAP包，具体包含如下两种类型。entry类型的Module：应用的主模块，包含应用的入口界面、入口图标和主功能特性，编译后生成entry类型的HAP。每一个应用分发到同一类型的设备上的应用程序包，只能包含唯一一个entry类型的HAP，也可以不包含。feature类型的Module：应用的动态特性模块，编译后生成feature类型的HAP。一个应用中可以包含一个或多个feature类型的HAP，也可以不包含。
+
+Ability类型的Module：用于实现应用的功能和特性。每一个Ability类型的Module编译后，会生成一个以.hap为后缀的文件，我们称其为HAP（Harmony Ability Package）包。HAP包可以独立安装和运行，是应用安装的基本单位，一个应用中可以包含一个或多个HAP包，具体包含如下两种类型。
+
+entry类型的Module：应用的主模块，包含应用的入口界面、入口图标和主功能特性，编译后生成entry类型的HAP。每一个应用分发到同一类型的设备上的应用程序包，只能包含唯一一个entry类型的HAP，也可以不包含。
+
+feature类型的Module：应用的动态特性模块，编译后生成feature类型的HAP。一个应用中可以包含一个或多个feature类型的HAP，也可以不包含。
+
+Library类型的Module：用于实现代码和资源的共享。同一个Library类型的Module可以被其他的Module多次引用，合理地使用该类型的Module，能够降低开发和维护成本。Library类型的Module分为Static和Shared两种类型，编译后会生成共享包。Static Library：静态共享库。编译后会生成一个以.har为后缀的文件，即静态共享包HAR（Harmony Archive）。Shared Library：动态共享库。编译后会生成一个以.hsp为后缀的文件，即动态共享包HSP（Harmony Shared Package）。说明实际上，Shared Library编译后除了会生成一个.hsp文件，还会生成一个.har文件。这个.har文件中包含了HSP对外导出的接口，应用中的其他模块需要通过.har文件来引用HSP的功能。为了表述方便，我们通常认为Shared Library编译后生成HSP。HAR与HSP两种共享包的主要区别体现在：共享包类型编译和运行方式发布和引用方式HARHAR中的代码和资源跟随使用方编译，如果有多个使用方，它们的编译产物中会存在多份相同拷贝。注意：编译HAR时，建议开启混淆能力，保护代码资产。HAR除了支持应用内引用，还可以独立打包发布，供其他应用引用。HSPHSP中的代码和资源可以独立编译，运行时在一个进程中代码也只会存在一份。HSP一般随应用进行打包，当前支持应用内和集成态HSP。应用内HSP只支持应用内引用，集成态HSP支持发布到ohpm私仓和跨应用引用。图1HAR和HSP在APP包中的形态示意图
+
+Library类型的Module：用于实现代码和资源的共享。同一个Library类型的Module可以被其他的Module多次引用，合理地使用该类型的Module，能够降低开发和维护成本。Library类型的Module分为Static和Shared两种类型，编译后会生成共享包。
+
+Static Library：静态共享库。编译后会生成一个以.har为后缀的文件，即静态共享包HAR（Harmony Archive）。
+
+Shared Library：动态共享库。编译后会生成一个以.hsp为后缀的文件，即动态共享包HSP（Harmony Shared Package）。
+
+说明实际上，Shared Library编译后除了会生成一个.hsp文件，还会生成一个.har文件。这个.har文件中包含了HSP对外导出的接口，应用中的其他模块需要通过.har文件来引用HSP的功能。为了表述方便，我们通常认为Shared Library编译后生成HSP。
+
+说明
+
+实际上，Shared Library编译后除了会生成一个.hsp文件，还会生成一个.har文件。这个.har文件中包含了HSP对外导出的接口，应用中的其他模块需要通过.har文件来引用HSP的功能。为了表述方便，我们通常认为Shared Library编译后生成HSP。
+
+HAR与HSP两种共享包的主要区别体现在：
+
+共享包类型编译和运行方式发布和引用方式HARHAR中的代码和资源跟随使用方编译，如果有多个使用方，它们的编译产物中会存在多份相同拷贝。注意：编译HAR时，建议开启混淆能力，保护代码资产。HAR除了支持应用内引用，还可以独立打包发布，供其他应用引用。HSPHSP中的代码和资源可以独立编译，运行时在一个进程中代码也只会存在一份。HSP一般随应用进行打包，当前支持应用内和集成态HSP。应用内HSP只支持应用内引用，集成态HSP支持发布到ohpm私仓和跨应用引用。
+
+HAR中的代码和资源跟随使用方编译，如果有多个使用方，它们的编译产物中会存在多份相同拷贝。
+
+注意：编译HAR时，建议开启混淆能力，保护代码资产。
+
+图1HAR和HSP在APP包中的形态示意图
+
+
+==================================================
+文件: markdown_content_20250422_204613.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-package-structure-stage
+爬取时间: 2025-04-22 20:46:13
+来源: Huawei Developer
+
+
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/application-package-structure-stage
+爬取时间: 2025-04-22 20:46:13
+来源: Huawei Developer
+
+开发态包结构
+
+在DevEco Studio上创建一个项目工程，并尝试创建多个不同类型的Module。根据实际工程中的目录对照本章节进行学习，可以有助于理解开发态的应用程序结构。
+
+图1项目工程结构示意图（以实际为准）
+
+工程结构主要包含的文件类型及用途如下：
+
+说明AppScope目录由DevEco Studio自动生成，不可更改。Module目录名称可以由DevEco Studio自动生成（比如entry、library等），也可以自定义。为了便于说明，下表中统一采用Module_name表示。
+
+说明
+
+AppScope目录由DevEco Studio自动生成，不可更改。Module目录名称可以由DevEco Studio自动生成（比如entry、library等），也可以自定义。为了便于说明，下表中统一采用Module_name表示。
+
+AppScope目录由DevEco Studio自动生成，不可更改。
+
+Module目录名称可以由DevEco Studio自动生成（比如entry、library等），也可以自定义。为了便于说明，下表中统一采用Module_name表示。
+
+文件类型说明配置文件包括应用级配置信息、以及Module级配置信息：-AppScope > app.json5：app.json5配置文件，用于声明应用的全局配置信息，比如应用Bundle名称、应用名称、应用图标、应用版本号等。-Module_name > src > main > module.json5：module.json5配置文件，用于声明Module基本信息、支持的设备类型、所含的组件信息、运行所需申请的权限等。ArkTS源码文件Module_name > src > main > ets：用于存放Module的ArkTS源码文件（.ets文件）。资源文件包括应用级资源文件、以及Module级资源文件，支持图形、多媒体、字符串、布局文件等，详见资源分类与访问。-AppScope > resources：用于存放应用需要用到的资源文件。-Module_name > src > main > resources：用于存放该Module需要用到的资源文件。其他配置文件用于编译构建，包括构建配置文件、编译构建任务脚本、混淆规则文件、依赖的共享包信息等。-build-profile.json5：工程级或Module级的构建配置文件，包括应用签名、产品配置等。-hvigorfile.ts：应用级或Module级的编译构建任务脚本，开发者可以自定义编译构建工具版本、控制构建行为的配置参数。-obfuscation-rules.txt：混淆规则文件。混淆开启后，在使用Release模式进行编译时，会对代码进行编译、混淆及压缩处理，保护代码资产。-oh-package.json5：用于存放依赖库的信息，包括所依赖的三方库和共享包。
+
+包括应用级配置信息、以及Module级配置信息：
+
+-AppScope > app.json5：app.json5配置文件，用于声明应用的全局配置信息，比如应用Bundle名称、应用名称、应用图标、应用版本号等。
+
+-Module_name > src > main > module.json5：module.json5配置文件，用于声明Module基本信息、支持的设备类型、所含的组件信息、运行所需申请的权限等。
+
+包括应用级资源文件、以及Module级资源文件，支持图形、多媒体、字符串、布局文件等，详见资源分类与访问。
+
+-AppScope > resources：用于存放应用需要用到的资源文件。
+
+-Module_name > src > main > resources：用于存放该Module需要用到的资源文件。
+
+用于编译构建，包括构建配置文件、编译构建任务脚本、混淆规则文件、依赖的共享包信息等。
+
+-build-profile.json5：工程级或Module级的构建配置文件，包括应用签名、产品配置等。
+
+-hvigorfile.ts：应用级或Module级的编译构建任务脚本，开发者可以自定义编译构建工具版本、控制构建行为的配置参数。
+
+-obfuscation-rules.txt：混淆规则文件。混淆开启后，在使用Release模式进行编译时，会对代码进行编译、混淆及压缩处理，保护代码资产。
+
+-oh-package.json5：用于存放依赖库的信息，包括所依赖的三方库和共享包。
+
+编译态包结构
+
+不同类型的Module编译后会生成对应的HAP、HAR、HSP等文件，开发态视图与编译态视图的对照关系如下：
+
+图2开发态与编译态的工程结构视图
+
+从开发态到编译态，Module中的文件会发生如下变更：
+
+ets目录：ArkTS源码编译生成.abc文件。
+
+resources目录：AppScope目录下的资源文件会合入到Module下面资源目录中，如果两个目录下存在重名文件，编译打包后只会保留AppScope目录下的资源文件。
+
+module配置文件：AppScope目录下的app.json5文件字段会合入到Module下面的module.json5文件之中，编译后生成HAP或HSP最终的module.json文件。
+
+说明在编译HAP和HSP时，会把他们所依赖的HAR直接编译到HAP和HSP中。
+
+在编译HAP和HSP时，会把他们所依赖的HAR直接编译到HAP和HSP中。
+
+发布态包结构
+
+每个应用中至少包含一个.hap文件，可能包含若干个.hsp文件、也可能不含，一个应用中的所有.hap与.hsp文件合在一起称为Bundle，其对应的bundleName是应用的唯一标识（详见app.json5配置文件中的bundleName标签）。
+
+当应用发布上架到应用市场时，需要将Bundle打包为一个.app后缀的文件用于上架，这个.app文件称为App Pack（Application Package），与此同时，DevEco Studio工具自动会生成一个pack.info文件。pack.info文件描述了App Pack中每个HAP和HSP的属性，包含APP中的bundleName和versionCode信息、以及Module中的name、type和abilities等信息。
+
+说明App Pack是发布上架到应用市场的基本单元，但是不能在设备上直接安装和运行。在应用签名、云端分发、端侧安装时，都是以HAP/HSP为单位进行签名、分发和安装的。
+
+App Pack是发布上架到应用市场的基本单元，但是不能在设备上直接安装和运行。在应用签名、云端分发、端侧安装时，都是以HAP/HSP为单位进行签名、分发和安装的。
+
+App Pack是发布上架到应用市场的基本单元，但是不能在设备上直接安装和运行。
+
+在应用签名、云端分发、端侧安装时，都是以HAP/HSP为单位进行签名、分发和安装的。
+
+图3编译发布与上架部署流程图
+
+选择合适的包类型
+
+HAP、HAR、HSP三者的功能和使用场景总结对比如下：
+
+Module类型包类型说明AbilityHAP应用的功能模块，可以独立安装和运行，必须包含一个entry类型的HAP，可选包含一个或多个feature类型的HAP。Static LibraryHAR静态共享包，编译态复用。- 支持应用内共享，也可以发布后供其他应用使用。- 作为二方库，发布到OHPM私仓，供公司内部其他应用使用。- 作为三方库，发布到OHPM中心仓，供其他应用使用。- 多包（HAP/HSP）引用相同的HAR时，会造成多包间代码和资源的重复拷贝，从而导致应用包膨大。- 注意：编译HAR时，建议开启混淆能力，保护代码资产。Shared LibraryHSP动态共享包，运行时复用。- 当多包（HAP/HSP）同时引用同一个共享包时，采用HSP替代HAR，可以避免HAR造成的多包间代码和资源的重复拷贝，从而减小应用包大小。
+
+静态共享包，编译态复用。
+
+- 支持应用内共享，也可以发布后供其他应用使用。
+
+- 作为二方库，发布到OHPM私仓，供公司内部其他应用使用。
+
+- 作为三方库，发布到OHPM中心仓，供其他应用使用。
+
+- 多包（HAP/HSP）引用相同的HAR时，会造成多包间代码和资源的重复拷贝，从而导致应用包膨大。
+
+- 注意：编译HAR时，建议开启混淆能力，保护代码资产。
+
+动态共享包，运行时复用。
+
+- 当多包（HAP/HSP）同时引用同一个共享包时，采用HSP替代HAR，可以避免HAR造成的多包间代码和资源的重复拷贝，从而减小应用包大小。
+
+HAP、HSP、HAR支持的规格对比如下，其中“√”表示是，“×”表示否。
+
+开发者可以根据实际场景所需的能力，选择相应类型的包进行开发。在后续的章节中还会针对如何使用HAP、HAR、HSP分别展开详细介绍。
+
+规格HAPHARHSP支持在配置文件中声明UIAbility组件√√√支持在配置文件中声明ExtensionAbility组件√××支持在配置文件中声明pages页面√×√支持包含资源文件与.so文件√√√支持依赖其他HAR文件√√√支持依赖其他HSP文件√√√支持在设备上独立安装运行√××
+
+说明如果HAR支持声明pages页面，那么当HAR被打包到HAP或HSP中时，其内部声明的pages页面可能会与HAP/HSP中的pages页面存在相对路径上的重复，这将导致无法根据相对路径识别特定的路由页面。因此，HAR不支持在配置文件中声明pages页面，但可以包含pages页面，并通过命名路由的方式进行跳转。由于HSP仅支持应用内共享，如果HAR依赖了HSP，则该HAR文件仅支持应用内共享，不支持发布到二方仓或三方仓供其他应用使用，否则会导致编译失败。HAR和HSP均不支持循环依赖，也不支持依赖传递。
+
+如果HAR支持声明pages页面，那么当HAR被打包到HAP或HSP中时，其内部声明的pages页面可能会与HAP/HSP中的pages页面存在相对路径上的重复，这将导致无法根据相对路径识别特定的路由页面。因此，HAR不支持在配置文件中声明pages页面，但可以包含pages页面，并通过命名路由的方式进行跳转。由于HSP仅支持应用内共享，如果HAR依赖了HSP，则该HAR文件仅支持应用内共享，不支持发布到二方仓或三方仓供其他应用使用，否则会导致编译失败。HAR和HSP均不支持循环依赖，也不支持依赖传递。
+
+如果HAR支持声明pages页面，那么当HAR被打包到HAP或HSP中时，其内部声明的pages页面可能会与HAP/HSP中的pages页面存在相对路径上的重复，这将导致无法根据相对路径识别特定的路由页面。因此，HAR不支持在配置文件中声明pages页面，但可以包含pages页面，并通过命名路由的方式进行跳转。
+
+由于HSP仅支持应用内共享，如果HAR依赖了HSP，则该HAR文件仅支持应用内共享，不支持发布到二方仓或三方仓供其他应用使用，否则会导致编译失败。
+
+HAR和HSP均不支持循环依赖，也不支持依赖传递。
+
+
+==================================================
+文件: markdown_content_20250422_204701.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hap-package
+爬取时间: 2025-04-22 20:47:01
+来源: Huawei Developer
+
+
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/hap-package
+爬取时间: 2025-04-22 20:47:00
+来源: Huawei Developer
+
+使用场景
+
+单HAP场景：如果只包含UIAbility组件，无需使用ExtensionAbility组件，优先采用单HAP（即一个entry包）来实现应用开发。虽然一个HAP中可以包含一个或多个UIAbility组件，为了避免不必要的资源加载，推荐采用“一个UIAbility+多个页面”的方式。
+
+多HAP场景：如果应用的功能比较复杂，需要使用ExtensionAbility组件，可以采用多HAP（即一个entry包+多个feature包）来实现应用开发，每个HAP中包含一个UIAbility组件或者一个ExtensionAbility组件。在这种场景下，可能会存在多个HAP引用相同的库文件，导致重复打包的问题。
+
+约束限制
+
+不支持导出接口和ArkUI组件，给其他模块使用。
+
+多HAP场景下，App Pack包中同一设备类型的所有HAP中必须有且只有一个Entry类型的HAP，Feature类型的HAP可以有一个或者多个，也可以没有。
+
+多HAP场景下，同一应用中的所有HAP的配置文件中的bundleName、versionCode、versionName、minCompatibleVersionCode、debug、minAPIVersion、targetAPIVersion、apiReleaseType相同，同一设备类型的所有HAP对应的moduleName标签必须唯一。HAP打包生成App Pack包时，会对上述参数配置进行校验。
+
+多HAP场景下，同一应用的所有HAP、HSP的签名证书要保持一致。上架应用市场是以App Pack形式上架，应用市场分发时会将所有HAP从App Pack中拆分出来，同时对其中的所有HAP进行重签名，这样保证了所有HAP签名证书的一致性。在调试阶段，开发者通过命令行或DevEco Studio将HAP安装到设备上时，要保证所有HAP签名证书一致，否则会出现安装失败的问题。
+
+创建
+
+下面简要介绍如何通过DevEco Studio新建一个HAP模块。
+
+创建工程，构建第一个ArkTS应用。
+
+在工程目录上单击右键，选择New > Module。
+
+在弹出的对话框中选择Empty Ability模板，单击Next。
+
+在Module配置界面，配置Module name，选择Module Type和Device Type，然后单击Next。
+
+在Ability配置界面，配置Ability name，然后单击Finish完成创建。
+
+开发
+
+HAP中支持添加UIAbility组件或ExtensionAbility组件，添加pages页面。具体操作可参考应用/服务开发。
+
+HAP中支持引用HAR或HSP共享包，详见HAR的使用、HSP的使用。
+
+调试
+
+通过DevEco Studio编译打包，生成单个或者多个HAP，即可基于HAP进行调试。如需根据不同的部署环境、目标人群、运行环境等，将同一个HAP定制编译为不同版本，请参见定制编译指导。
+
+开发者可以采用DevEco Studio或者hdc工具进行调试：
+
+方法一：使用DevEco Studio进行调试，详见应用程序包调试方法。
+
+方法二：使用hdc工具进行调试。在调试前，需要先安装或更新HAP，此处有两种方式：直接使用hdc安装、更新HAP。HAP的路径为开发平台上的文件路径，以Windows开发平台为例，命令参考如下：收起深色代码主题复制// 安装、更新，多HAP可以指定多个文件路径hdc install entry.hap feature.hap// 执行结果install bundle successfully.// 卸载hdc uninstall com.example.myapplication// 执行结果uninstall bundle successfully.先执行hdc shell，再使用bm工具安装、更新HAP。HAP的文件路径为真机上的文件路径，命令参考如下：收起深色代码主题复制// 先执行hdc shell才能使用bm工具hdc shell// 安装、更新，多HAP可以指定多个文件路径bm install -p /data/app/entry.hap /data/app/feature.hap// 执行结果install bundle successfully.// 卸载bm uninstall -n com.example.myapplication// 执行结果uninstall bundle successfully.完成HAP安装或更新后，即可参考相关调试命令进行调试。
+
+方法二：使用hdc工具进行调试。
+
+在调试前，需要先安装或更新HAP，此处有两种方式：
+
+直接使用hdc安装、更新HAP。HAP的路径为开发平台上的文件路径，以Windows开发平台为例，命令参考如下：收起深色代码主题复制// 安装、更新，多HAP可以指定多个文件路径hdc install entry.hap feature.hap// 执行结果install bundle successfully.// 卸载hdc uninstall com.example.myapplication// 执行结果uninstall bundle successfully.
+
+直接使用hdc安装、更新HAP。
+
+HAP的路径为开发平台上的文件路径，以Windows开发平台为例，命令参考如下：
+
+收起深色代码主题复制// 安装、更新，多HAP可以指定多个文件路径hdc install entry.hap feature.hap// 执行结果install bundle successfully.// 卸载hdc uninstall com.example.myapplication// 执行结果uninstall bundle successfully.
+
+收起深色代码主题复制
+
+收起
+
+深色代码主题复制
+
+深色代码主题
+
+复制
+
+``` // 安装、更新，多HAP可以指定多个文件路径hdc install entry.hap feature.hap// 执行结果install bundle successfully.// 卸载hdc uninstall com.example.myapplication// 执行结果uninstall bundle successfully. ```
+
+// 安装、更新，多HAP可以指定多个文件路径
+
+hdc install entry.hap feature.hap
+
+// 执行结果
+
+install bundle successfully.
+
+// 卸载
+
+hdc uninstall com.example.myapplication
+
+uninstall bundle successfully.
+
+先执行hdc shell，再使用bm工具安装、更新HAP。HAP的文件路径为真机上的文件路径，命令参考如下：收起深色代码主题复制// 先执行hdc shell才能使用bm工具hdc shell// 安装、更新，多HAP可以指定多个文件路径bm install -p /data/app/entry.hap /data/app/feature.hap// 执行结果install bundle successfully.// 卸载bm uninstall -n com.example.myapplication// 执行结果uninstall bundle successfully.
+
+先执行hdc shell，再使用bm工具安装、更新HAP。
+
+HAP的文件路径为真机上的文件路径，命令参考如下：
+
+收起深色代码主题复制// 先执行hdc shell才能使用bm工具hdc shell// 安装、更新，多HAP可以指定多个文件路径bm install -p /data/app/entry.hap /data/app/feature.hap// 执行结果install bundle successfully.// 卸载bm uninstall -n com.example.myapplication// 执行结果uninstall bundle successfully.
+
+``` // 先执行hdc shell才能使用bm工具hdc shell// 安装、更新，多HAP可以指定多个文件路径bm install -p /data/app/entry.hap /data/app/feature.hap// 执行结果install bundle successfully.// 卸载bm uninstall -n com.example.myapplication// 执行结果uninstall bundle successfully. ```
+
+// 先执行hdc shell才能使用bm工具
+
+hdc shell
+
+bm install -p /data/app/entry.hap /data/app/feature.hap
+
+bm uninstall -n com.example.myapplication
+
+完成HAP安装或更新后，即可参考相关调试命令进行调试。
+
+示例代码
+
+多HAP
+
+
+==================================================
+文件: markdown_content_20250422_204723.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/har-package
+爬取时间: 2025-04-22 20:47:23
+来源: Huawei Developer
+
+
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/har-package
+爬取时间: 2025-04-22 20:47:23
+来源: Huawei Developer
+
+使用场景
+
+支持应用内共享，也可以发布后供其他应用使用。
+
+作为二方库，发布到OHPM私仓，供公司内部其他应用使用。
+
+作为三方库，发布到OHPM中心仓，供其他应用使用。
+
+多包（HAP/HSP）引用相同的HAR时，会造成多包间代码和资源的重复拷贝，从而导致应用包膨大。
+
+约束限制
+
+HAR不支持在设备上单独安装/运行，只能作为应用模块的依赖项被引用。
+
+HAR不支持在配置文件中声明ExtensionAbility组件，但支持UIAbility组件。说明如果使用startAbility接口拉起HAR中的UIAbility，接口参数中的moduleName取值需要为依赖该HAR的HAP/HSP的moduleName。
+
+说明如果使用startAbility接口拉起HAR中的UIAbility，接口参数中的moduleName取值需要为依赖该HAR的HAP/HSP的moduleName。
+
+说明
+
+如果使用startAbility接口拉起HAR中的UIAbility，接口参数中的moduleName取值需要为依赖该HAR的HAP/HSP的moduleName。
+
+HAR不支持在配置文件中声明pages页面，但是可以包含pages页面，并通过Navigation跳转的方式进行跳转。
+
+HAR不支持引用AppScope目录中的资源。在编译构建时，AppScope中的内容不会打包到HAR中，因此会导致HAR资源引用失败。
+
+HAR可以依赖其他HAR，但不支持循环依赖，也不支持依赖传递。
+
+创建
+
+通过DevEco Studio创建一个HAR模块，详见创建库模块。
+
+开发
+
+介绍如何导出HAR的ArkUI组件、接口、资源，供其他应用或当前应用的其他模块引用。
+
+Index.ets文件是HAR导出声明文件的入口，HAR需要导出的接口，统一在Index.ets文件中导出。Index.ets文件是DevEco Studio默认自动生成的，用户也可以自定义，在模块的oh-package.json5文件中的main字段配置入口声明文件，配置如下所示：
+
+收起深色代码主题复制{"main":"Index.ets"}
+
+收起深色代码主题复制
+
+收起
+
+深色代码主题复制
+
+深色代码主题
+
+复制
+
+``` {"main":"Index.ets"} ```
+
+{
+
+"main":"Index.ets"
+
+"main"
+
+:
+
+"Index.ets"
+
+}
+
+导出ArkUI组件
+
+通过export导出ArkUI组件，示例如下：
+
+收起深色代码主题复制// library/src/main/ets/components/mainpage/MainPage.ets@ComponentexportstructMainPage{@Statemessage:string='HAR MainPage';build() {Column() {Row() {Text(this.message).fontSize(32).fontWeight(FontWeight.Bold)}.margin({top:'32px'}).height(56).width('624px')Flex({justifyContent:FlexAlign.Center,alignItems:ItemAlign.Center,alignContent:FlexAlign.Center}) {Column() {Image($r('app.media.pic_empty')).width('33%')Text($r('app.string.empty')).fontSize(14).fontColor($r('app.color.text_color'))}}.width('100%').height('90%')}.width('100%').height('100%').backgroundColor($r('app.color.page_background'))}}
+
+``` // library/src/main/ets/components/mainpage/MainPage.ets@ComponentexportstructMainPage{@Statemessage:string='HAR MainPage';build() {Column() {Row() {Text(this.message).fontSize(32).fontWeight(FontWeight.Bold)}.margin({top:'32px'}).height(56).width('624px')Flex({justifyContent:FlexAlign.Center,alignItems:ItemAlign.Center,alignContent:FlexAlign.Center}) {Column() {Image($r('app.media.pic_empty')).width('33%')Text($r('app.string.empty')).fontSize(14).fontColor($r('app.color.text_color'))}}.width('100%').height('90%')}.width('100%').height('100%').backgroundColor($r('app.color.page_background'))}} ```
+
+// library/src/main/ets/components/mainpage/MainPage.ets
+
+@Component
+
+exportstructMainPage{
+
+export
+
+MainPage
+
+@Statemessage:string='HAR MainPage';
+
+@State
+
+message
+
+string
+
+'HAR MainPage'
+
+build() {
+
+build
+
+Column() {
+
+Column
+
+Row() {
+
+Row
+
+Text(this.message)
+
+Text
+
+this
+
+.fontSize(32)
+
+fontSize
+
+32
+
+.fontWeight(FontWeight.Bold)
+
+fontWeight
+
+FontWeight
+
+Bold
+
+.margin({top:'32px'})
+
+margin
+
+top
+
+'32px'
+
+.height(56)
+
+height
+
+56
+
+.width('624px')
+
+width
+
+'624px'
+
+Flex({justifyContent:FlexAlign.Center,alignItems:ItemAlign.Center,alignContent:FlexAlign.Center}) {
+
+Flex
+
+justifyContent
+
+FlexAlign
+
+Center
+
+alignItems
+
+ItemAlign
+
+alignContent
+
+Image($r('app.media.pic_empty')).width('33%')
+
+Image
+
+'app.media.pic_empty'
+
+'33%'
+
+Text($r('app.string.empty'))
+
+'app.string.empty'
+
+.fontSize(14)
+
+14
+
+.fontColor($r('app.color.text_color'))
+
+fontColor
+
+'app.color.text_color'
+
+}.width('100%')
+
+'100%'
+
+.height('90%')
+
+'90%'
+
+.width('100%')
+
+.height('100%')
+
+.backgroundColor($r('app.color.page_background'))
+
+backgroundColor
+
+'app.color.page_background'
+
+HAR对外暴露的接口，在Index.ets导出文件中声明如下所示：
+
+收起深色代码主题复制// library/Index.etsexport{MainPage}from'./src/main/ets/components/mainpage/MainPage';
+
+``` // library/Index.etsexport{MainPage}from'./src/main/ets/components/mainpage/MainPage'; ```
+
+// library/Index.ets
+
+export{MainPage}from'./src/main/ets/components/mainpage/MainPage';
+
+from
+
+'./src/main/ets/components/mainpage/MainPage'
+
+导出类和方法
+
+通过export导出类和方法，支持导出多个类和方法，示例如下所示：
+
+收起深色代码主题复制// library/src/main/ets/test.etsexportclassLog{staticinfo(msg:string) {console.info(msg);}}exportfunctionfunc() {return'har func';}exportfunctionfunc2() {return'har func2';}
+
+``` // library/src/main/ets/test.etsexportclassLog{staticinfo(msg:string) {console.info(msg);}}exportfunctionfunc() {return'har func';}exportfunctionfunc2() {return'har func2';} ```
+
+// library/src/main/ets/test.ets
+
+exportclassLog{
+
+class
+
+Log
+
+staticinfo(msg:string) {
+
+static
+
+info
+
+msg:string
+
+console.info(msg);
+
+console
+
+exportfunctionfunc() {
+
+function
+
+func
+
+return'har func';
+
+return
+
+'har func'
+
+exportfunctionfunc2() {
+
+func2
+
+return'har func2';
+
+'har func2'
+
+收起深色代码主题复制// library/Index.etsexport{Log}from'./src/main/ets/test';export{ func }from'./src/main/ets/test';export{ func2 }from'./src/main/ets/test';
+
+``` // library/Index.etsexport{Log}from'./src/main/ets/test';export{ func }from'./src/main/ets/test';export{ func2 }from'./src/main/ets/test'; ```
+
+export{Log}from'./src/main/ets/test';
+
+'./src/main/ets/test'
+
+export{ func }from'./src/main/ets/test';
+
+export{ func2 }from'./src/main/ets/test';
+
+导出native方法
+
+在HAR中也可以包含C++编写的so。对于so中的native方法，HAR通过以下方式导出，以导出liblibrary.so的加法接口add为例：
+
+收起深色代码主题复制// library/src/main/ets/utils/nativeTest.etsimportnativefrom'liblibrary.so';exportfunctionnativeAdd(a:number, b:number):number{letresult:number= native.add(a, b);returnresult;}
+
+``` // library/src/main/ets/utils/nativeTest.etsimportnativefrom'liblibrary.so';exportfunctionnativeAdd(a:number, b:number):number{letresult:number= native.add(a, b);returnresult;} ```
+
+// library/src/main/ets/utils/nativeTest.ets
+
+importnativefrom'liblibrary.so';
+
+import
+
+'liblibrary.so'
+
+exportfunctionnativeAdd(a:number, b:number):number{
+
+nativeAdd
+
+a:number, b:number
+
+number
+
+letresult:number= native.add(a, b);
+
+let
+
+result
+
+add
+
+returnresult;
+
+收起深色代码主题复制// library/Index.etsexport{ nativeAdd }from'./src/main/ets/utils/nativeTest';
+
+``` // library/Index.etsexport{ nativeAdd }from'./src/main/ets/utils/nativeTest'; ```
+
+export{ nativeAdd }from'./src/main/ets/utils/nativeTest';
+
+'./src/main/ets/utils/nativeTest'
+
+导出资源
+
+在编译构建HAP时，DevEco Studio会从HAP模块及依赖的模块中收集资源文件，如果不同模块下的资源文件出现重名冲突时，DevEco Studio会按照以下优先级进行覆盖（优先级由高到低）：
+
+AppScope（仅Stage模型支持）。
+
+HAP包自身模块。
+
+依赖的HAR模块，如果依赖的多个HAR之间有资源冲突，会按照工程oh-package.json5中dependencies下的依赖顺序进行覆盖，依赖顺序在前的优先级较高。例如下方示例中dayjs和lottie中包含同名文件时，会优先使用dayjs中的资源。说明如果在AppScope/HAP模块/HAR模块的国际化目录中配置了资源，在相同的国际化限定词下，合并的优先级也遵循上述规则。同时，国际化限定词中配置的优先级高于在base中的配置。如：在AppScope的base中配置了资源字段，在HAR模块的en_US中配置了同样的资源字段，则在en_US的使用场景中，会更优先使用HAR模块中配置的资源字段。
+
+说明如果在AppScope/HAP模块/HAR模块的国际化目录中配置了资源，在相同的国际化限定词下，合并的优先级也遵循上述规则。同时，国际化限定词中配置的优先级高于在base中的配置。如：在AppScope的base中配置了资源字段，在HAR模块的en_US中配置了同样的资源字段，则在en_US的使用场景中，会更优先使用HAR模块中配置的资源字段。
+
+如果在AppScope/HAP模块/HAR模块的国际化目录中配置了资源，在相同的国际化限定词下，合并的优先级也遵循上述规则。同时，国际化限定词中配置的优先级高于在base中的配置。如：在AppScope的base中配置了资源字段，在HAR模块的en_US中配置了同样的资源字段，则在en_US的使用场景中，会更优先使用HAR模块中配置的资源字段。
+
+收起深色代码主题复制// oh-package.json5{"dependencies": {"dayjs":"^1.10.4","lottie":"^2.0.0"}}
+
+``` // oh-package.json5{"dependencies": {"dayjs":"^1.10.4","lottie":"^2.0.0"}} ```
+
+// oh-package.json5
+
+"dependencies": {
+
+"dependencies"
+
+"dayjs":"^1.10.4",
+
+"dayjs"
+
+"^1.10.4"
+
+"lottie":"^2.0.0"
+
+"lottie"
+
+"^2.0.0"
+
+使用
+
+介绍如何配置HAR依赖，并引用HAR的ArkUI组件、接口、资源。
+
+引用HAR前，需要先配置对HAR的依赖，详见引用HAR文件和资源。
+
+引用HAR的ArkUI组件
+
+HAR的依赖配置成功后，可以引用HAR的ArkUI组件。通过import引入HAR导出的ArkUI组件，示例如下所示：
+
+收起深色代码主题复制// entry/src/main/ets/pages/IndexSec.etsimport{MainPage}from'library';@Entry@ComponentstructIndexSec{build() {Row() {// 引用HAR的ArkUI组件MainPage()}.height('100%')}}
+
+``` // entry/src/main/ets/pages/IndexSec.etsimport{MainPage}from'library';@Entry@ComponentstructIndexSec{build() {Row() {// 引用HAR的ArkUI组件MainPage()}.height('100%')}} ```
+
+// entry/src/main/ets/pages/IndexSec.ets
+
+import{MainPage}from'library';
+
+'library'
+
+@Entry
+
+structIndexSec{
+
+IndexSec
+
+// 引用HAR的ArkUI组件
+
+MainPage()
+
+引用HAR的类和方法
+
+通过import引用HAR导出的类和方法，示例如下所示：
+
+收起深色代码主题复制// entry/src/main/ets/pages/Index.etsimport{Log}from'library';import{ func }from'library';@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Column() {Text(this.message).fontFamily('HarmonyHeiTi').fontWeight(FontWeight.Bold).fontSize(32).fontWeight(700).fontColor($r('app.color.text_color')).textAlign(TextAlign.Start).margin({top:'32px'}).width('624px')//引用HAR的ets类和方法Button($r('app.string.button')).id('button').height(48).width('624px').margin({top:'4%'}).type(ButtonType.Capsule).fontFamily('HarmonyHeiTi').borderRadius($r('sys.float.ohos_id_corner_radius_button')).backgroundColor($r('app.color.button_background')).fontColor($r('sys.color.ohos_id_color_foreground_contrary')).fontSize($r('sys.float.ohos_id_text_size_button1')).onClick(() =>{// 引用HAR的类和方法Log.info('har msg');this.message='func return: '+func();})}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}}
+
+``` // entry/src/main/ets/pages/Index.etsimport{Log}from'library';import{ func }from'library';@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Column() {Text(this.message).fontFamily('HarmonyHeiTi').fontWeight(FontWeight.Bold).fontSize(32).fontWeight(700).fontColor($r('app.color.text_color')).textAlign(TextAlign.Start).margin({top:'32px'}).width('624px')//引用HAR的ets类和方法Button($r('app.string.button')).id('button').height(48).width('624px').margin({top:'4%'}).type(ButtonType.Capsule).fontFamily('HarmonyHeiTi').borderRadius($r('sys.float.ohos_id_corner_radius_button')).backgroundColor($r('app.color.button_background')).fontColor($r('sys.color.ohos_id_color_foreground_contrary')).fontSize($r('sys.float.ohos_id_text_size_button1')).onClick(() =>{// 引用HAR的类和方法Log.info('har msg');this.message='func return: '+func();})}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}} ```
+
+// entry/src/main/ets/pages/Index.ets
+
+import{Log}from'library';
+
+import{ func }from'library';
+
+structIndex{
+
+Index
+
+@Statemessage:string='Hello World';
+
+'Hello World'
+
+.fontFamily('HarmonyHeiTi')
+
+fontFamily
+
+'HarmonyHeiTi'
+
+.fontWeight(700)
+
+700
+
+.textAlign(TextAlign.Start)
+
+textAlign
+
+TextAlign
+
+Start
+
+//引用HAR的ets类和方法
+
+Button($r('app.string.button'))
+
+Button
+
+'app.string.button'
+
+.id('button')
+
+id
+
+'button'
+
+.height(48)
+
+48
+
+.margin({top:'4%'})
+
+'4%'
+
+.type(ButtonType.Capsule)
+
+type
+
+ButtonType
+
+Capsule
+
+.borderRadius($r('sys.float.ohos_id_corner_radius_button'))
+
+borderRadius
+
+'sys.float.ohos_id_corner_radius_button'
+
+.backgroundColor($r('app.color.button_background'))
+
+'app.color.button_background'
+
+.fontColor($r('sys.color.ohos_id_color_foreground_contrary'))
+
+'sys.color.ohos_id_color_foreground_contrary'
+
+.fontSize($r('sys.float.ohos_id_text_size_button1'))
+
+'sys.float.ohos_id_text_size_button1'
+
+.onClick(() =>{
+
+onClick
+
+() =>
+
+// 引用HAR的类和方法
+
+Log.info('har msg');
+
+'har msg'
+
+this.message='func return: '+func();
+
+'func return: '
+
+})
+
+引用HAR的native方法
+
+通过import引用HAR导出的native方法，示例如下所示：
+
+收起深色代码主题复制// entry/src/main/ets/pages/Index.etsimport{ nativeAdd }from'library';@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Column() {Text(this.message).fontFamily('HarmonyHeiTi').fontWeight(FontWeight.Bold).fontSize(32).fontWeight(700).fontColor($r('app.color.text_color')).textAlign(TextAlign.Start).margin({top:'32px'}).width('624px')//引用HAR的native方法Button($r('app.string.native_add')).id('nativeAdd').height(48).width('624px').margin({top:'4%',bottom:'6%'}).type(ButtonType.Capsule).fontFamily('HarmonyHeiTi').borderRadius($r('sys.float.ohos_id_corner_radius_button')).backgroundColor($r('app.color.button_background')).fontColor($r('sys.color.ohos_id_color_foreground_contrary')).fontSize($r('sys.float.ohos_id_text_size_button1')).onClick(() =>{this.message='result: '+nativeAdd(1,2);})}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}}
+
+``` // entry/src/main/ets/pages/Index.etsimport{ nativeAdd }from'library';@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Column() {Text(this.message).fontFamily('HarmonyHeiTi').fontWeight(FontWeight.Bold).fontSize(32).fontWeight(700).fontColor($r('app.color.text_color')).textAlign(TextAlign.Start).margin({top:'32px'}).width('624px')//引用HAR的native方法Button($r('app.string.native_add')).id('nativeAdd').height(48).width('624px').margin({top:'4%',bottom:'6%'}).type(ButtonType.Capsule).fontFamily('HarmonyHeiTi').borderRadius($r('sys.float.ohos_id_corner_radius_button')).backgroundColor($r('app.color.button_background')).fontColor($r('sys.color.ohos_id_color_foreground_contrary')).fontSize($r('sys.float.ohos_id_text_size_button1')).onClick(() =>{this.message='result: '+nativeAdd(1,2);})}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}} ```
+
+import{ nativeAdd }from'library';
+
+//引用HAR的native方法
+
+Button($r('app.string.native_add'))
+
+'app.string.native_add'
+
+.id('nativeAdd')
+
+'nativeAdd'
+
+.margin({top:'4%',bottom:'6%'})
+
+bottom
+
+'6%'
+
+this.message='result: '+nativeAdd(1,2);
+
+'result: '
+
+1
+
+2
+
+引用HAR的资源
+
+通过$r引用HAR中的资源，例如在HAR模块的src/main/resources里添加字符串资源（在string.json中定义，name：hello_har）和图片资源（icon_har.png），然后在Entry模块中引用该字符串和图片资源的示例如下所示：
+
+收起深色代码主题复制// entry/src/main/ets/pages/Index.ets@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Column() {// 引用HAR的字符串资源Text($r('app.string.hello_har')).id('stringHar').fontFamily('HarmonyHeiTi').fontColor($r('app.color.text_color')).fontSize(24).fontWeight(500).margin({top:'40%'})List() {ListItem() {// 引用HAR的图片资源Image($r('app.media.icon_har')).id('iconHar').borderRadius('48px')}.margin({top:'5%'}).width('312px')}.alignListItem(ListItemAlign.Center)}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}}
+
+``` // entry/src/main/ets/pages/Index.ets@Entry@ComponentstructIndex{@Statemessage:string='Hello World';build() {Column() {// 引用HAR的字符串资源Text($r('app.string.hello_har')).id('stringHar').fontFamily('HarmonyHeiTi').fontColor($r('app.color.text_color')).fontSize(24).fontWeight(500).margin({top:'40%'})List() {ListItem() {// 引用HAR的图片资源Image($r('app.media.icon_har')).id('iconHar').borderRadius('48px')}.margin({top:'5%'}).width('312px')}.alignListItem(ListItemAlign.Center)}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}} ```
+
+// 引用HAR的字符串资源
+
+Text($r('app.string.hello_har'))
+
+'app.string.hello_har'
+
+.id('stringHar')
+
+'stringHar'
+
+.fontSize(24)
+
+24
+
+.fontWeight(500)
+
+500
+
+.margin({top:'40%'})
+
+'40%'
+
+List() {
+
+List
+
+ListItem() {
+
+ListItem
+
+// 引用HAR的图片资源
+
+Image($r('app.media.icon_har'))
+
+'app.media.icon_har'
+
+.id('iconHar')
+
+'iconHar'
+
+.borderRadius('48px')
+
+'48px'
+
+.margin({top:'5%'})
+
+'5%'
+
+.width('312px')
+
+'312px'
+
+.alignListItem(ListItemAlign.Center)
+
+alignListItem
+
+ListItemAlign
+
+编译
+
+HAR可以作为二方库和三方库提供给其他应用使用，如果需要对代码资产进行保护时，建议开启混淆能力。
+
+混淆能力开启后，DevEco Studio在构建HAR时，会对代码进行编译、混淆及压缩处理，保护代码资产。
+
+HAR模块原先默认开启混淆能力，会对API 10及以上的HAR模块，且编译模块为release时，自动进行简单的代码混淆；从DevEco Studio 5.0.3.600开始，新建工程默认关闭代码混淆功能，可以在HAR模块的build-profile.json5文件中的ruleOptions字段下的enable进行开启混淆，详情请见代码混淆，配置如下所示：
+
+收起深色代码主题复制{"apiType":"stageMode","buildOption":{},"buildOptionSet":[{"name":"release","arkOptions":{"obfuscation":{"ruleOptions":{"enable":true,"files":["./obfuscation-rules.txt"]},"consumerFiles":["./consumer-rules.txt"]}}},],"targets":[{"name":"default"}]}
+
+``` {"apiType":"stageMode","buildOption":{},"buildOptionSet":[{"name":"release","arkOptions":{"obfuscation":{"ruleOptions":{"enable":true,"files":["./obfuscation-rules.txt"]},"consumerFiles":["./consumer-rules.txt"]}}},],"targets":[{"name":"default"}]} ```
+
+"apiType":"stageMode",
+
+"apiType"
+
+"stageMode"
+
+,
+
+"buildOption":{
+
+"buildOption"
+
+},
+
+"buildOptionSet":[
+
+"buildOptionSet"
+
+[
+
+"name":"release",
+
+"name"
+
+"release"
+
+"arkOptions":{
+
+"arkOptions"
+
+"obfuscation":{
+
+"obfuscation"
+
+"ruleOptions":{
+
+"ruleOptions"
+
+"enable":true,
+
+"enable"
+
+true
+
+"files":[
+
+"files"
+
+"./obfuscation-rules.txt"
+
+]
+
+"consumerFiles":[
+
+"consumerFiles"
+
+"./consumer-rules.txt"
+
+],
+
+"targets":[
+
+"targets"
+
+"name":"default"
+
+"default"
+
+编译生成TS文件
+
+说明在HAR中使用Sendable时，开启该配置。
+
+在HAR中使用Sendable时，开启该配置。
+
+使用限制
+
+在依赖TS HAR时，禁止引用TS HAR中的ArkUI组件。
+
+HAR模块中arkts文件编译后，默认产物为js文件，想要将产物修改为ts文件，可以在HAR模块下的module.json5文件中将"metadata"字段下的"name"设置为“UseTsHar”，配置如下所示：
+
+收起深色代码主题复制{"module":{"name":"TsClosedHar","type":"har","deviceTypes":["default","tablet","2in1"],"metadata":[{"name":"UseTsHar","value":"true"}]}}
+
+``` {"module":{"name":"TsClosedHar","type":"har","deviceTypes":["default","tablet","2in1"],"metadata":[{"name":"UseTsHar","value":"true"}]}} ```
+
+"module":{
+
+"module"
+
+"name":"TsClosedHar",
+
+"TsClosedHar"
+
+"type":"har",
+
+"type"
+
+"har"
+
+"deviceTypes":[
+
+"deviceTypes"
+
+"default",
+
+"tablet",
+
+"tablet"
+
+"2in1"
+
+"metadata":[
+
+"metadata"
+
+"name":"UseTsHar",
+
+"UseTsHar"
+
+"value":"true"
+
+"value"
+
+"true"
+
+发布
+
+详见发布HAR。
+
+
+==================================================
+文件: markdown_content_20250422_204815.txt
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/in-app-hsp
+爬取时间: 2025-04-22 20:48:15
+来源: Huawei Developer
+
+
+==================================================
+
+URL: https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/in-app-hsp
+爬取时间: 2025-04-22 20:48:15
+来源: Huawei Developer
+
+使用场景
+
+多个HAP/HSP共用的代码和资源放在同一个HSP中，可以提高代码、资源的可重用性和可维护性，同时编译打包时也只保留一份HSP代码和资源，能够有效控制应用包大小。
+
+HSP在运行时按需加载，有助于提升应用性能。
+
+同一个组织内部的多个应用之间，可以使用集成态HSP实现代码和资源的共享。
+
+约束限制
+
+HSP不支持在设备上单独安装/运行，需要与依赖该HSP的HAP一起安装/运行。HSP的版本号必须与HAP版本号一致。
+
+HSP不支持在配置文件中声明ExtensionAbility组件，但支持在配置文件中声明UIAbility（除入口ability外）组件。
+
+HSP可以依赖其他HAR或HSP，但不支持循环依赖，也不支持依赖传递。
+
+说明循环依赖：例如有三个HSP，HSP-A、HSP-B和HSP-C，循环依赖指HSP-A依赖HSP-B，HSP-B依赖HSP-C，HSP-C又依赖HSP-A。依赖传递：例如有三个HSP，HSP-A、HSP-B和HSP-C，依赖关系是HSP-A依赖HSP-B，HSP-B依赖HSP-C。不支持传递依赖指HSP-A可以使用HSP-B的方法和组件，但是HSP-A不能直接使用HSP-C的方法和组件。
+
+说明
+
+循环依赖：例如有三个HSP，HSP-A、HSP-B和HSP-C，循环依赖指HSP-A依赖HSP-B，HSP-B依赖HSP-C，HSP-C又依赖HSP-A。依赖传递：例如有三个HSP，HSP-A、HSP-B和HSP-C，依赖关系是HSP-A依赖HSP-B，HSP-B依赖HSP-C。不支持传递依赖指HSP-A可以使用HSP-B的方法和组件，但是HSP-A不能直接使用HSP-C的方法和组件。
+
+循环依赖：例如有三个HSP，HSP-A、HSP-B和HSP-C，循环依赖指HSP-A依赖HSP-B，HSP-B依赖HSP-C，HSP-C又依赖HSP-A。
+
+依赖传递：例如有三个HSP，HSP-A、HSP-B和HSP-C，依赖关系是HSP-A依赖HSP-B，HSP-B依赖HSP-C。不支持传递依赖指HSP-A可以使用HSP-B的方法和组件，但是HSP-A不能直接使用HSP-C的方法和组件。
+
+创建
+
+通过DevEco Studio创建一个HSP模块，详见创建HSP模块，我们以创建一个名为library的HSP模块为例。基本的工程目录结构如下：
+
+收起深色代码主题复制MyApplication├── library│ ├── src│ │ └── main│ │ ├── ets│ │ │ └── pages│ │ │ └── index.ets//模块library的页面文件│ │ ├── resources//模块library的资源目录│ │ └──module.json5//模块library的配置文件│ ├── oh-package.json5//模块级│ ├── index.ets//入口文件index.ets│ └── build-profile.json5//模块级└── build-profile.json5//工程级
+
+收起深色代码主题复制
+
+收起
+
+深色代码主题复制
+
+深色代码主题
+
+复制
+
+``` MyApplication├── library│ ├── src│ │ └── main│ │ ├── ets│ │ │ └── pages│ │ │ └── index.ets//模块library的页面文件│ │ ├── resources//模块library的资源目录│ │ └──module.json5//模块library的配置文件│ ├── oh-package.json5//模块级│ ├── index.ets//入口文件index.ets│ └── build-profile.json5//模块级└── build-profile.json5//工程级 ```
+
+MyApplication
+
+├── library
+
+│ ├── src
+
+│ │ └── main
+
+│ │ ├── ets
+
+│ │ │ └── pages
+
+│ │ │ └── index.ets//模块library的页面文件
+
+//模块library的页面文件
+
+│ │ ├── resources//模块library的资源目录
+
+//模块library的资源目录
+
+│ │ └──module.json5//模块library的配置文件
+
+module
+
+//模块library的配置文件
+
+│ ├── oh-package.json5//模块级
+
+package
+
+//模块级
+
+│ ├── index.ets//入口文件index.ets
+
+//入口文件index.ets
+
+│ └── build-profile.json5//模块级
+
+└── build-profile.json5//工程级
+
+//工程级
+
+开发
+
+介绍如何导出HSP的ArkUI组件、接口、资源，供应用内的其他HAP/HSP引用。
+
+导出ArkUI组件
+
+ArkUI组件可以通过export导出，例如：
+
+收起深色代码主题复制// library/src/main/ets/components/MyTitleBar.ets@ComponentexportstructMyTitleBar{build() {Row() {Text($r('app.string.library_title')).id('library').fontFamily('HarmonyHeiTi').fontWeight(FontWeight.Bold).fontSize(32).fontColor($r('app.color.text_color'))}.width('100%')}}
+
+``` // library/src/main/ets/components/MyTitleBar.ets@ComponentexportstructMyTitleBar{build() {Row() {Text($r('app.string.library_title')).id('library').fontFamily('HarmonyHeiTi').fontWeight(FontWeight.Bold).fontSize(32).fontColor($r('app.color.text_color'))}.width('100%')}} ```
+
+// library/src/main/ets/components/MyTitleBar.ets
+
+@Component
+
+exportstructMyTitleBar{
+
+export
+
+MyTitleBar
+
+build() {
+
+build
+
+Row() {
+
+Row
+
+Text($r('app.string.library_title'))
+
+Text
+
+'app.string.library_title'
+
+.id('library')
+
+id
+
+'library'
+
+.fontFamily('HarmonyHeiTi')
+
+fontFamily
+
+'HarmonyHeiTi'
+
+.fontWeight(FontWeight.Bold)
+
+fontWeight
+
+FontWeight
+
+Bold
+
+.fontSize(32)
+
+fontSize
+
+32
+
+.fontColor($r('app.color.text_color'))
+
+fontColor
+
+'app.color.text_color'
+
+}
+
+.width('100%')
+
+width
+
+'100%'
+
+对外暴露的接口，需要在入口文件index.ets中声明：
+
+收起深色代码主题复制// library/index.etsexport{MyTitleBar}from'./src/main/ets/components/MyTitleBar';
+
+``` // library/index.etsexport{MyTitleBar}from'./src/main/ets/components/MyTitleBar'; ```
+
+// library/index.ets
+
+export{MyTitleBar}from'./src/main/ets/components/MyTitleBar';
+
+from
+
+'./src/main/ets/components/MyTitleBar'
+
+导出类和方法
+
+通过export导出类和方法，例如：
+
+收起深色代码主题复制// library/src/main/ets/utils/test.etsexportclassLog{staticinfo(msg:string):void{console.info(msg);}}exportfunctionadd(a:number, b:number):number{returna + b;}exportfunctionminus(a:number, b:number):number{returna - b;}
+
+``` // library/src/main/ets/utils/test.etsexportclassLog{staticinfo(msg:string):void{console.info(msg);}}exportfunctionadd(a:number, b:number):number{returna + b;}exportfunctionminus(a:number, b:number):number{returna - b;} ```
+
+// library/src/main/ets/utils/test.ets
+
+exportclassLog{
+
+class
+
+Log
+
+staticinfo(msg:string):void{
+
+static
+
+info
+
+msg
+
+string
+
+void
+
+console.info(msg);
+
+console
+
+exportfunctionadd(a:number, b:number):number{
+
+function
+
+add
+
+a:number, b:number
+
+number
+
+returna + b;
+
+return
+
+exportfunctionminus(a:number, b:number):number{
+
+minus
+
+returna - b;
+
+收起深色代码主题复制// library/index.etsexport{Log, add, minus }from'./src/main/ets/utils/test';
+
+``` // library/index.etsexport{Log, add, minus }from'./src/main/ets/utils/test'; ```
+
+export{Log, add, minus }from'./src/main/ets/utils/test';
+
+'./src/main/ets/utils/test'
+
+导出native方法
+
+在HSP中也可以包含C++编写的so。对于so中的native方法，HSP通过间接的方式导出，以导出liblibrary.so的乘法接口multi为例：
+
+收起深色代码主题复制// library/src/main/ets/utils/nativeTest.etsimportnativefrom'liblibrary.so';exportfunctionnativeMulti(a:number, b:number):number{letresult:number= native.multi(a, b);returnresult;}
+
+``` // library/src/main/ets/utils/nativeTest.etsimportnativefrom'liblibrary.so';exportfunctionnativeMulti(a:number, b:number):number{letresult:number= native.multi(a, b);returnresult;} ```
+
+// library/src/main/ets/utils/nativeTest.ets
+
+importnativefrom'liblibrary.so';
+
+import
+
+'liblibrary.so'
+
+exportfunctionnativeMulti(a:number, b:number):number{
+
+nativeMulti
+
+letresult:number= native.multi(a, b);
+
+let
+
+result
+
+multi
+
+returnresult;
+
+收起深色代码主题复制// library/index.etsexport{ nativeMulti }from'./src/main/ets/utils/nativeTest';
+
+``` // library/index.etsexport{ nativeMulti }from'./src/main/ets/utils/nativeTest'; ```
+
+export{ nativeMulti }from'./src/main/ets/utils/nativeTest';
+
+'./src/main/ets/utils/nativeTest'
+
+通过$r访问HSP中的资源
+
+在组件中，经常需要使用字符串、图片等资源。HSP中的组件需要使用资源时，一般将其所用资源放在HSP包内，而非放在HSP的使用方处，以符合高内聚低耦合的原则。
+
+在工程中，常通过$r/$rawfile的形式引用应用资源。可以用$r/$rawfile访问本模块resources目录下的资源，如访问resources目录下定义的图片src/main/resources/base/media/example.png时，可以用$r("app.media.example")。有关$r/$rawfile的详细使用方式，请参阅文档资源分类与访问中“资源访问-应用资源”小节。
+
+不推荐使用相对路径的方式，容易引用错误路径。例如：
+
+当要引用上述同一图片资源时，在HSP模块中使用Image("../../resources/base/media/example.png")，实际上该Image组件访问的是HSP调用方（如entry）下的资源entry/src/main/resources/base/media/example.png。
+
+收起深色代码主题复制// library/src/main/ets/pages/Index.ets// 正确用例Image($r('app.media.example')).id('example').borderRadius('48px')// 错误用例Image("../../resources/base/media/example.png").id('example').borderRadius('48px')
+
+``` // library/src/main/ets/pages/Index.ets// 正确用例Image($r('app.media.example')).id('example').borderRadius('48px')// 错误用例Image("../../resources/base/media/example.png").id('example').borderRadius('48px') ```
+
+// library/src/main/ets/pages/Index.ets
+
+// 正确用例
+
+Image($r('app.media.example'))
+
+Image
+
+'app.media.example'
+
+.id('example')
+
+'example'
+
+.borderRadius('48px')
+
+borderRadius
+
+'48px'
+
+// 错误用例
+
+Image("../../resources/base/media/example.png")
+
+"../../resources/base/media/example.png"
+
+导出HSP中的资源
+
+跨包访问HSP内资源时，推荐实现一个资源管理类，以封装对外导出的资源。采用这种方式，具有如下优点：
+
+HSP开发者可以控制自己需要导出的资源，不需要对外暴露的资源可以不用导出。
+
+使用方无须感知HSP内部的资源名称。当HSP内部的资源名称发生变化时，也不需要使用方跟着修改。
+
+其具体实现如下：
+
+将需要对外提供的资源封装为一个资源管理类：
+
+收起深色代码主题复制// library/src/main/ets/ResManager.etsexportclassResManager{staticgetPic():Resource{return$r('app.media.pic');}staticgetDesc():Resource{return$r('app.string.shared_desc');}}
+
+``` // library/src/main/ets/ResManager.etsexportclassResManager{staticgetPic():Resource{return$r('app.media.pic');}staticgetDesc():Resource{return$r('app.string.shared_desc');}} ```
+
+// library/src/main/ets/ResManager.ets
+
+exportclassResManager{
+
+ResManager
+
+staticgetPic():Resource{
+
+getPic
+
+Resource
+
+return$r('app.media.pic');
+
+'app.media.pic'
+
+staticgetDesc():Resource{
+
+getDesc
+
+return$r('app.string.shared_desc');
+
+'app.string.shared_desc'
+
+收起深色代码主题复制// library/index.etsexport{ResManager}from'./src/main/ets/ResManager';
+
+``` // library/index.etsexport{ResManager}from'./src/main/ets/ResManager'; ```
+
+export{ResManager}from'./src/main/ets/ResManager';
+
+'./src/main/ets/ResManager'
+
+使用
+
+介绍如何引用HSP中的接口，以及如何通过页面路由实现HSP的pages页面跳转与返回。
+
+引用HSP中的接口
+
+要使用HSP中的接口，首先需要在使用方的oh-package.json5中配置对它的依赖，详见引用动态共享包。
+
+依赖配置成功后，就可以像使用HAR一样调用HSP的对外接口了。例如，上面的library已经导出了下面这些接口：
+
+收起深色代码主题复制// library/index.etsexport{Log, add, minus }from'./src/main/ets/utils/test';export{MyTitleBar}from'./src/main/ets/components/MyTitleBar';export{ResManager}from'./src/main/ets/ResManager';export{ nativeMulti }from'./src/main/ets/utils/nativeTest';
+
+``` // library/index.etsexport{Log, add, minus }from'./src/main/ets/utils/test';export{MyTitleBar}from'./src/main/ets/components/MyTitleBar';export{ResManager}from'./src/main/ets/ResManager';export{ nativeMulti }from'./src/main/ets/utils/nativeTest'; ```
+
+在使用方的代码中，可以这样使用：
+
+收起深色代码主题复制// entry/src/main/ets/pages/index.etsimport{Log, add,MyTitleBar,ResManager, nativeMulti }from'library';import{BusinessError}from"@kit.BasicServicesKit";constTAG='Index';@Entry@ComponentstructIndex{@Statemessage:string='';build() {Column() {List() {ListItem() {MyTitleBar()}.margin({left:'35px',top:'32px'})ListItem() {Text(this.message).fontFamily('HarmonyHeiTi').fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(FontWeight.Bold)}.width('685px').margin({top:30,bottom:10})ListItem() {// ResManager返回的Resource对象，可以传给组件直接使用，也可以从中取出资源来使用Image(ResManager.getPic()).id('image').borderRadius('48px')}.width('685px').margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4})ListItem() {Text($r('app.string.add')).fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(500).height('100%')}.id('add').borderRadius(24).width('685px').height('84px').backgroundColor($r('sys.color.ohos_id_color_foreground_contrary')).margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4}).onClick(() =>{Log.info('add button click!');this.message='result: '+add(1,2);})ListItem() {Text($r('app.string.get_string_value')).fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(500).height('100%')}.id('getStringValue').borderRadius(24).width('685px').height('84px').backgroundColor($r('sys.color.ohos_id_color_foreground_contrary')).margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4}).onClick(() =>{// 先通过当前上下文获取hsp模块的上下文，再获取hsp模块的resourceManager，然后再调用resourceManager的接口获取资源getContext().createModuleContext('library').resourceManager.getStringValue(ResManager.getDesc()).then(value=>{console.log('getStringValue is '+ value);this.message='getStringValue is '+ value;}).catch((err: BusinessError) =>{console.error('getStringValue promise error is '+ err);});})ListItem() {Text($r('app.string.native_multi')).fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(500).height('100%')}.id('nativeMulti').borderRadius(24).width('685px').height('84px').backgroundColor($r('sys.color.ohos_id_color_foreground_contrary')).margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4}).onClick(() =>{Log.info('nativeMulti button click!');this.message='result: '+nativeMulti(3,4);})}.alignListItem(ListItemAlign.Center)}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}}
+
+``` // entry/src/main/ets/pages/index.etsimport{Log, add,MyTitleBar,ResManager, nativeMulti }from'library';import{BusinessError}from"@kit.BasicServicesKit";constTAG='Index';@Entry@ComponentstructIndex{@Statemessage:string='';build() {Column() {List() {ListItem() {MyTitleBar()}.margin({left:'35px',top:'32px'})ListItem() {Text(this.message).fontFamily('HarmonyHeiTi').fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(FontWeight.Bold)}.width('685px').margin({top:30,bottom:10})ListItem() {// ResManager返回的Resource对象，可以传给组件直接使用，也可以从中取出资源来使用Image(ResManager.getPic()).id('image').borderRadius('48px')}.width('685px').margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4})ListItem() {Text($r('app.string.add')).fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(500).height('100%')}.id('add').borderRadius(24).width('685px').height('84px').backgroundColor($r('sys.color.ohos_id_color_foreground_contrary')).margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4}).onClick(() =>{Log.info('add button click!');this.message='result: '+add(1,2);})ListItem() {Text($r('app.string.get_string_value')).fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(500).height('100%')}.id('getStringValue').borderRadius(24).width('685px').height('84px').backgroundColor($r('sys.color.ohos_id_color_foreground_contrary')).margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4}).onClick(() =>{// 先通过当前上下文获取hsp模块的上下文，再获取hsp模块的resourceManager，然后再调用resourceManager的接口获取资源getContext().createModuleContext('library').resourceManager.getStringValue(ResManager.getDesc()).then(value=>{console.log('getStringValue is '+ value);this.message='getStringValue is '+ value;}).catch((err: BusinessError) =>{console.error('getStringValue promise error is '+ err);});})ListItem() {Text($r('app.string.native_multi')).fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(500).height('100%')}.id('nativeMulti').borderRadius(24).width('685px').height('84px').backgroundColor($r('sys.color.ohos_id_color_foreground_contrary')).margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4}).onClick(() =>{Log.info('nativeMulti button click!');this.message='result: '+nativeMulti(3,4);})}.alignListItem(ListItemAlign.Center)}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}} ```
+
+// entry/src/main/ets/pages/index.ets
+
+import{Log, add,MyTitleBar,ResManager, nativeMulti }from'library';
+
+import{BusinessError}from"@kit.BasicServicesKit";
+
+BusinessError
+
+"@kit.BasicServicesKit"
+
+constTAG='Index';
+
+const
+
+TAG
+
+'Index'
+
+@Entry
+
+structIndex{
+
+Index
+
+@Statemessage:string='';
+
+@State
+
+message
+
+''
+
+Column() {
+
+Column
+
+List() {
+
+List
+
+ListItem() {
+
+ListItem
+
+MyTitleBar()
+
+.margin({left:'35px',top:'32px'})
+
+margin
+
+left
+
+'35px'
+
+top
+
+'32px'
+
+Text(this.message)
+
+this
+
+.fontSize(18)
+
+18
+
+.textAlign(TextAlign.Start)
+
+textAlign
+
+TextAlign
+
+Start
+
+.width('685px')
+
+'685px'
+
+.margin({top:30,bottom:10})
+
+30
+
+bottom
+
+10
+
+// ResManager返回的Resource对象，可以传给组件直接使用，也可以从中取出资源来使用
+
+Image(ResManager.getPic())
+
+.id('image')
+
+'image'
+
+.margin({top:10,bottom:10})
+
+.padding({left:12,right:12,top:4,bottom:4})
+
+padding
+
+12
+
+right
+
+4
+
+Text($r('app.string.add'))
+
+'app.string.add'
+
+.fontWeight(500)
+
+500
+
+.height('100%')
+
+height
+
+.id('add')
+
+'add'
+
+.borderRadius(24)
+
+24
+
+.height('84px')
+
+'84px'
+
+.backgroundColor($r('sys.color.ohos_id_color_foreground_contrary'))
+
+backgroundColor
+
+'sys.color.ohos_id_color_foreground_contrary'
+
+.onClick(() =>{
+
+onClick
+
+() =>
+
+Log.info('add button click!');
+
+'add button click!'
+
+this.message='result: '+add(1,2);
+
+'result: '
+
+1
+
+2
+
+})
+
+Text($r('app.string.get_string_value'))
+
+'app.string.get_string_value'
+
+.id('getStringValue')
+
+'getStringValue'
+
+// 先通过当前上下文获取hsp模块的上下文，再获取hsp模块的resourceManager，然后再调用resourceManager的接口获取资源
+
+getContext()
+
+getContext
+
+.createModuleContext('library')
+
+createModuleContext
+
+.resourceManager
+
+resourceManager
+
+.getStringValue(ResManager.getDesc())
+
+getStringValue
+
+.then(value=>{
+
+then
+
+value=>
+
+value
+
+console.log('getStringValue is '+ value);
+
+log
+
+'getStringValue is '
+
+this.message='getStringValue is '+ value;
+
+.catch((err: BusinessError) =>{
+
+catch
+
+(err: BusinessError) =>
+
+err: BusinessError
+
+console.error('getStringValue promise error is '+ err);
+
+error
+
+'getStringValue promise error is '
+
+});
+
+Text($r('app.string.native_multi'))
+
+'app.string.native_multi'
+
+.id('nativeMulti')
+
+'nativeMulti'
+
+Log.info('nativeMulti button click!');
+
+'nativeMulti button click!'
+
+this.message='result: '+nativeMulti(3,4);
+
+3
+
+.alignListItem(ListItemAlign.Center)
+
+alignListItem
+
+ListItemAlign
+
+Center
+
+.backgroundColor($r('app.color.page_background'))
+
+'app.color.page_background'
+
+页面跳转和返回
+
+开发者想在entry模块中，添加一个按钮跳转至library模块中的menu页面（路径为：library/src/main/ets/pages/library_menu.ets），那么可以在使用方的代码（entry模块下的Index.ets，路径为：entry/src/main/ets/pages/Index.ets）里这样使用：
+
+收起深色代码主题复制// entry/src/main/ets/pages/Index.ets@Entry@ComponentstructIndex{@Statemessage:string='';pathStack:NavPathStack=newNavPathStack();build() {Navigation(this.pathStack) {Column() {List() {ListItem() {Text($r('app.string.click_to_menu')).fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(500).height('100%')}.id('clickToMenu').borderRadius(24).width('685px').height('84px').backgroundColor($r('sys.color.ohos_id_color_foreground_contrary')).margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4}).onClick(() =>{this.pathStack.pushPathByName('library_menu',null)})}.alignListItem(ListItemAlign.Center)}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}.title("Navigation_index").mode(NavigationMode.Stack)}}
+
+``` // entry/src/main/ets/pages/Index.ets@Entry@ComponentstructIndex{@Statemessage:string='';pathStack:NavPathStack=newNavPathStack();build() {Navigation(this.pathStack) {Column() {List() {ListItem() {Text($r('app.string.click_to_menu')).fontSize(18).textAlign(TextAlign.Start).width('100%').fontWeight(500).height('100%')}.id('clickToMenu').borderRadius(24).width('685px').height('84px').backgroundColor($r('sys.color.ohos_id_color_foreground_contrary')).margin({top:10,bottom:10}).padding({left:12,right:12,top:4,bottom:4}).onClick(() =>{this.pathStack.pushPathByName('library_menu',null)})}.alignListItem(ListItemAlign.Center)}.width('100%').backgroundColor($r('app.color.page_background')).height('100%')}.title("Navigation_index").mode(NavigationMode.Stack)}} ```
+
+// entry/src/main/ets/pages/Index.ets
+
+pathStack:NavPathStack=newNavPathStack();
+
+pathStack
+
+NavPathStack
+
+new
+
+Navigation(this.pathStack) {
+
+Navigation
+
+Text($r('app.string.click_to_menu'))
+
+'app.string.click_to_menu'
+
+.id('clickToMenu')
+
+'clickToMenu'
+
+.padding({
+
+left:12,
+
+right:12,
+
+top:4,
+
+bottom:4
+
+this.pathStack.pushPathByName('library_menu',null)
+
+pushPathByName
+
+'library_menu'
+
+null
+
+}.title("Navigation_index")
+
+title
+
+"Navigation_index"
+
+.mode(NavigationMode.Stack)
+
+mode
+
+NavigationMode
+
+Stack
+
+在library下新增page文件（library/src/main/ets/pages/library_menu.ets），其中'back_to_index'的按钮返回上一页。
+
+收起深色代码主题复制// library/src/main/ets/pages/library_menu.ets@BuilderexportfunctionPageOneBuilder() {Library_Menu()}@Entry@ComponentexportstructLibrary_Menu {@Statemessage:string='Hello World';pathStack:NavPathStack=newNavPathStack();build() {NavDestination() {Row() {Column() {Text(this.message).fontSize($r('app.float.page_text_font_size')).fontWeight(FontWeight.Bold).onClick(() =>{this.message='Welcome';})Button("back_to_index").fontSize(50).onClick(() =>{this.pathStack.pop();})}.width('100%')}.height('100%')}.title('Library_Menu').onReady((context: NavDestinationContext) =>{this.pathStack= context.pathStack})}}
+
+``` // library/src/main/ets/pages/library_menu.ets@BuilderexportfunctionPageOneBuilder() {Library_Menu()}@Entry@ComponentexportstructLibrary_Menu {@Statemessage:string='Hello World';pathStack:NavPathStack=newNavPathStack();build() {NavDestination() {Row() {Column() {Text(this.message).fontSize($r('app.float.page_text_font_size')).fontWeight(FontWeight.Bold).onClick(() =>{this.message='Welcome';})Button("back_to_index").fontSize(50).onClick(() =>{this.pathStack.pop();})}.width('100%')}.height('100%')}.title('Library_Menu').onReady((context: NavDestinationContext) =>{this.pathStack= context.pathStack})}} ```
+
+// library/src/main/ets/pages/library_menu.ets
+
+@Builder
+
+exportfunctionPageOneBuilder() {
+
+PageOneBuilder
+
+Library_Menu()
+
+Library
+
+exportstructLibrary_Menu {
+
+@Statemessage:string='Hello World';
+
+'Hello World'
+
+NavDestination() {
+
+NavDestination
+
+.fontSize($r('app.float.page_text_font_size'))
+
+'app.float.page_text_font_size'
+
+this.message='Welcome';
+
+'Welcome'
+
+Button("back_to_index").fontSize(50).onClick(() =>{
+
+Button
+
+"back_to_index"
+
+50
+
+this.pathStack.pop();
+
+pop
+
+}.title('Library_Menu')
+
+'Library_Menu'
+
+.onReady((context: NavDestinationContext) =>{
+
+onReady
+
+(context: NavDestinationContext) =>
+
+context: NavDestinationContext
+
+this.pathStack= context.pathStack
+
+需要在library模块下新增route_map.json文件（library/src/main/resources/base/profile/route_map.json）。
+
+收起深色代码主题复制{"routerMap": [{"name":"library_menu","pageSourceFile":"src/main/ets/pages/library_menu.ets","buildFunction":"PageOneBuilder","data": {"description":"this is library_menu"}}]}
+
+``` {"routerMap": [{"name":"library_menu","pageSourceFile":"src/main/ets/pages/library_menu.ets","buildFunction":"PageOneBuilder","data": {"description":"this is library_menu"}}]} ```
+
+{
+
+"routerMap": [
+
+"routerMap"
+
+"name":"library_menu",
+
+"name"
+
+"library_menu"
+
+"pageSourceFile":"src/main/ets/pages/library_menu.ets",
+
+"pageSourceFile"
+
+"src/main/ets/pages/library_menu.ets"
+
+"buildFunction":"PageOneBuilder",
+
+"buildFunction"
+
+"PageOneBuilder"
+
+"data": {
+
+"data"
+
+"description":"this is library_menu"
+
+"description"
+
+"this is library_menu"
+
+]
+
+在library模块下的配置文件（library/src/main/module.json5）中配置json文件。
+
+收起深色代码主题复制{"module": {"name":"library","type":"shared","description":"$string:shared_desc","deviceTypes": ["phone","tablet","2in1"],"deliveryWithInstall":true,"pages":"$profile:main_pages","routerMap":"$profile:route_map"//新增}}
+
+``` {"module": {"name":"library","type":"shared","description":"$string:shared_desc","deviceTypes": ["phone","tablet","2in1"],"deliveryWithInstall":true,"pages":"$profile:main_pages","routerMap":"$profile:route_map"//新增}} ```
+
+"module": {
+
+"module"
+
+"name":"library",
+
+"library"
+
+"type":"shared",
+
+"type"
+
+"shared"
+
+"description":"$string:shared_desc",
+
+"$string:shared_desc"
+
+"deviceTypes": [
+
+"deviceTypes"
+
+"phone",
+
+"phone"
+
+"tablet",
+
+"tablet"
+
+"2in1"
+
+],
+
+"deliveryWithInstall":true,
+
+"deliveryWithInstall"
+
+true
+
+"pages":"$profile:main_pages",
+
+"pages"
+
+"$profile:main_pages"
+
+"routerMap":"$profile:route_map"//新增
+
+"$profile:route_map"
+
+//新增
+
+页面跳转和页面返回都使用了Navigation的特性，详情参考Navigation跳转。
+

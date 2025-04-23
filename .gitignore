@@ -1,0 +1,43 @@
+# Python virtual environment
+venv/
+env/
+ENV/
+
+# Python byte-compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Local development settings
+instance/
+.webassets-cache
+
+# Selenium webdriver files
+*.exe
+chromedriver*
+geckodriver*
+
+# Project specific
+*.db
+*.sqlite3
+
+# System files
+.DS_Store
+Thumbs.db 
