@@ -5,9 +5,19 @@ from datetime import datetime
 import urllib3
 import certifi
 import time
+import json
 
 # 禁用SSL警告
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+def load_config():
+    """加载配置文件"""
+    try:
+        with open('config.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except Exception as e:
+        print(f"加载配置文件失败: {str(e)}")
+        return None
 
 def ensure_data_directory():
     """确保数据目录存在"""
@@ -31,17 +41,14 @@ def save_to_txt(content, filename=None):
     
     # 以追加模式打开文件
     with open(filepath, 'a', encoding='utf-8') as f:
-        # 如果文件是新创建的，添加元数据
+        # 如果文件是新创建的，直接写入内容
         if not file_exists:
-            f.write(f"""URL: {url}
-爬取时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
-来源: Huawei Developer
-
-""")
-        # 添加分隔线
-        f.write("\n" + "="*50 + "\n\n")
-        # 写入新内容
-        f.write(content)
+            f.write(content)
+        else:
+            # 添加分隔线
+            f.write("\n" + "="*50 + "\n\n")
+            # 写入新内容
+            f.write(content)
     
     return filepath
 
@@ -89,11 +96,11 @@ def extract_markdown_content(soup):
     
     return '\n\n'.join(cleaned_text)
 
-def scrape_huawei_training(url):
+def scrape_huawei_training(url, settings):
     try:
         with sync_playwright() as p:
             # 启动浏览器
-            browser = p.chromium.launch(headless=False)  # 设置为非无头模式以便调试
+            browser = p.chromium.launch(headless=settings.get('headless', False))
             page = browser.new_page()
             
             try:
@@ -103,7 +110,7 @@ def scrape_huawei_training(url):
                 
                 # 等待页面加载
                 print("等待页面加载...")
-                time.sleep(10)  # 等待时间
+                time.sleep(settings.get('wait_time', 10))
                 
                 # 打印页面标题和URL
                 print(f"页面标题: {page.title()}")
@@ -112,11 +119,9 @@ def scrape_huawei_training(url):
                 # 等待tiledSection元素出现
                 print("等待tiledSection元素...")
                 try:
-                    # 使用复合选择器
-                    page.wait_for_selector('div.tiledSection', timeout=60000)
+                    page.wait_for_selector('div.tiledSection', timeout=settings.get('timeout', 60000))
                 except Exception as e:
                     print(f"等待tiledSection元素超时: {str(e)}")
-                    # 打印页面内容以便调试
                     print("页面内容预览:")
                     print(page.content()[:1000])
                     return None
@@ -139,20 +144,46 @@ def scrape_huawei_training(url):
                 return full_content
                 
             finally:
-                # 关闭浏览器
                 browser.close()
                 
     except Exception as e:
         print(f"爬取过程中出现错误: {str(e)}")
         return None
 
-if __name__ == "__main__":
-    url = "https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/resource-categories-and-access"
-    markdown_content = scrape_huawei_training(url)
+def process_all_urls():
+    """处理配置文件中的所有URL"""
+    config = load_config()
+    if not config:
+        print("无法加载配置文件，程序退出")
+        return
     
-    if markdown_content:
-        print("爬取成功！")
-        filepath = save_to_txt(markdown_content)
-        print(f"数据已保存到: {filepath}")
-    else:
-        print("爬取失败！") 
+    settings = config.get('settings', {})
+    urls = config.get('urls', [])
+    
+    if not urls:
+        print("配置文件中没有找到URL")
+        return
+    
+    print(f"找到 {len(urls)} 个URL需要处理")
+    
+    for url_data in urls:
+        url = url_data.get('url')
+        description = url_data.get('description', '')
+        category = url_data.get('category', '')
+        
+        print(f"\n处理URL: {url}")
+        print(f"描述: {description}")
+        print(f"分类: {category}")
+        
+        markdown_content = scrape_huawei_training(url, settings)
+        
+        if markdown_content:
+            # 使用分类和描述作为文件名的一部分
+            filename = f"{category}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+            filepath = save_to_txt(markdown_content, filename)
+            print(f"数据已保存到: {filepath}")
+        else:
+            print("爬取失败！")
+
+if __name__ == "__main__":
+    process_all_urls() 
