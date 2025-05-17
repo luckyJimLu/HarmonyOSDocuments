@@ -26,11 +26,29 @@ def load_urls(file_path='urls.txt'):
     """加载URL列表"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
-            urls = [line.strip() for line in f if line.strip()]
+            urls = []
+            for line in f:
+                line = line.strip()
+                if line and is_valid_url(line):  # 验证是否为有效的 URL
+                    urls.append(line)
+                else:
+                    logging.warning(f"跳过无效的URL: {line}")
         return urls
     except Exception as e:
         logging.error(f"加载URL文件失败: {str(e)}")
         return []
+
+def is_valid_url(url):
+    """验证是否为有效的URL"""
+    url_regex = re.compile(
+        r'^(https?://)?'  # 支持 http:// 或 https://
+        r'([a-zA-Z0-9.-]+)'  # 域名部分
+        r'(\.[a-zA-Z]{2,})'  # 顶级域名部分
+        r'(:\d+)?'  # 可选的端口号
+        r'(/.*)?$',  # 可选的路径部分
+        re.IGNORECASE
+    )
+    return re.match(url_regex, url) is not None
 
 def ensure_data_directory():
     """确保数据目录存在"""
@@ -39,18 +57,29 @@ def ensure_data_directory():
         os.makedirs(data_dir)
     return data_dir
 
-def save_to_markdown(content, filename=None):
-    """保存内容到Markdown文件"""
+def save_to_markdown(content, filename_prefix="markdown_content"):
+    """保存内容到Markdown文件，单个文件大小不超过5MB"""
     data_dir = ensure_data_directory()
-    
-    if filename is None:
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        filename = f'markdown_content_{timestamp}.md'
-    filepath = os.path.join(data_dir, filename)
-    with open(filepath, 'w', encoding='utf-8') as f:
+    max_file_size = 5 * 1024 * 1024  # 5MB
+
+    # 初始化文件计数器
+    file_index = 1
+    current_filename = f"{filename_prefix}_{file_index}.md"
+    current_filepath = os.path.join(data_dir, current_filename)
+
+    # 如果文件已存在且超过大小限制，递增文件计数器
+    while os.path.exists(current_filepath) and os.path.getsize(current_filepath) >= max_file_size:
+        file_index += 1
+        current_filename = f"{filename_prefix}_{file_index}.md"
+        current_filepath = os.path.join(data_dir, current_filename)
+
+    # 将内容追加到当前文件
+    with open(current_filepath, 'a', encoding='utf-8') as f:
         f.write(content)
-    logging.info(f"内容已保存到文件: {filepath}")
-    return filepath
+        f.write("\n\n")  # 添加换行分隔符
+
+    logging.info(f"内容已保存到文件: {current_filepath}")
+    return current_filepath
 
 def extract_markdown_content(soup):
     """提取markdown-body类的内容，并处理图像、JSON、JavaScript、表格和有序列表"""
@@ -86,6 +115,11 @@ def extract_markdown_content(soup):
                         pre_content = process_pre_element(pre_element)
                         if pre_content:
                             all_content.append(pre_content)
+                    if not p_elements and not pre_element:
+                        # 如果没有 <p> 和 <pre> 元素，直接提取 <li> 的文本
+                        text = li.get_text(strip=True)
+                        if text:
+                            all_content.append(f"- {text}")
             elif element.name == 'ol':
                 # 处理 ol 元素
                 count = 1
@@ -164,8 +198,9 @@ def process_pre_element(element):
         shell_text = '\n'.join(li.get_text(strip=False) for li in element.find_all('li'))
         return f"\n```shell\n{shell_text}\n```\n"
     else:
-        logging.debug(f"未识别的 <pre> 元素格式: {element.get_text(strip=True)}")
-        return None
+        # 处理无语言格式内容
+        less_text = '\n'.join(li.get_text(strip=False) for li in element.find_all('li'))
+        return f"\n```less\n{less_text}\n```\n"
 
 def convert_table_to_markdown(table):
     """将HTML表格转换为Markdown表格"""
@@ -184,7 +219,7 @@ def convert_table_to_markdown(table):
     
     return "\n".join(table_md)
 
-def scrape_huawei_training(url, wait_time=10, timeout=60000, headless=True):
+def scrape_huawei_training(url, wait_time=3, timeout=10000, headless=True):
     try:
         with sync_playwright() as p:
             # 启动浏览器时设置 headless=True
@@ -226,17 +261,6 @@ def scrape_huawei_training(url, wait_time=10, timeout=60000, headless=True):
         logging.error(f"爬取过程中出现错误: {str(e)}")
         return None
 
-def save_all_to_markdown(contents, filename="all_content.txt"):
-    """将所有内容保存到一个Markdown文件"""
-    data_dir = ensure_data_directory()
-    filepath = os.path.join(data_dir, filename)
-    
-    with open(filepath, 'w', encoding='utf-8') as f:
-        f.write(contents)
-    
-    logging.info(f"所有内容已保存到文件: {filepath}")
-    return filepath
-
 def process_all_urls():
     """处理文本文件中的所有URL"""
     urls = load_urls()
@@ -261,8 +285,7 @@ def process_all_urls():
             markdown_content = scrape_huawei_training(url)
             
             if markdown_content:
-                filename = f"url_{datetime.now().strftime('%Y%m%d_%H%M%S')}.md"
-                filepath = save_to_markdown(markdown_content, filename)
+                filepath = save_to_markdown(markdown_content)
                 logging.info(f"数据已保存到: {filepath}")
                 processed_urls.add(url)
             else:
